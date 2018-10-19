@@ -1,0 +1,23 @@
+<h3>YOUR STEPS FOR THIS SCENE</h3>
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Eclipse</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">{{ include.eclipse_steps | markdownify }}</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Git</a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">{{ include.git_steps | markdownify }}</div>
+        </div>
+    </div>
+</div>

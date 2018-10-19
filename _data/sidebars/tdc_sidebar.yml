@@ -1,0 +1,120 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: TDC Demo
+  product: tdc
+  version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Introduction
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /index.html
+      output: web
+
+    - title: Lab Flow Diagram
+      url: /lab_flow_diagram.html
+      output: web, pdf
+    
+    - title: Architecture Diagram
+      url: /architecture_diagram.html
+      output: web, pdf
+    
+    - title: Credentials Quick Reference
+      url: /credentials.html
+      output: web, pdf
+
+  - title: Act I
+    output: web, pdf
+    folderitems:
+
+    - title: The App
+      url: /tdc_acti_1.html
+      output: web, pdf
+
+    - title: Let’s Make Some Changes
+      url: /tdc_acti_2.html
+      output: web, pdf
+
+    - title: We're Building!
+      url: /tdc_acti_3.html
+      output: web, pdf
+
+    - title: Not So Fast!
+      url: /tdc_acti_4.html
+      output: web, pdf
+
+    - title: Fix Our Script
+      url: /tdc_acti_5.html
+      output: web, pdf
+
+    - title: We're Building! (Again)
+      url: /tdc_acti_6.html
+      output: web, pdf
+
+    - title: Validate Our Build
+      url: /tdc_acti_7.html
+      output: web, pdf
+
+    - title: Add some data to Production
+      url: /tdc_acti_8.html
+      output: web, pdf
+
+    - title: Works in My Environment!
+      url: /tdc_acti_9.html
+      output: web, pdf
+
+    - title: Automated Testing
+      url: /tdc_acti_10.html
+      output: web, pdf
+
+    - title: Some Automation Details
+      url: /tdc_acti_11.html
+      output: web, pdf
+
+    - title: Oh Snap! A bug!
+      url: /tdc_acti_12.html
+      output: web, pdf
+
+    - title: Ready to Test Again
+      url: /tdc_acti_13.html
+      output: web, pdf
+
+  - title: Act II
+    output: web, pdf
+    folderitems:
+
+    - title: Bugs Happen
+      url: /tdc_actii_1.html
+      output: web, pdf
+
+    - title: Triaging the Bug
+      url: /tdc_actii_2.html
+      output: web, pdf
+
+    - title: Squash the Bug
+      url: /tdc_actii_3.html
+      output: web, pdf
+
+    - title: Let’s test again, with real data
+      url: /tdc_actii_4.html
+      output: web, pdf
+
+    - title: Trust, but Verify
+      url: /tdc_actii_5.html
+      output: web, pdf
