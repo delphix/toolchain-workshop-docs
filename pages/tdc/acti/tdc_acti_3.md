@@ -25,7 +25,7 @@ Here is the sequence of automation:
 ### YOUR STEPS FOR THIS SCENE:
 
 1. Bring Chrome to the foreground
-2. Click on the Jenkins Tab
+2. Click on the Jenkins Tab and `login` as Admin (upper right hand corner)
 3. Click Enable Auto Refresh (this ensures we see the latest info)
 4. Watch the builds
 5. After the builds are done, the deploy job will have a red circle

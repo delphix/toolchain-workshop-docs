@@ -37,7 +37,7 @@ toc: false
    {% include custom/image_popout.html file="acti/fix_our_script_git_2.png" %}
 6. Enter `git add .` to add our changes
 7. Enter `git commit -m "fixed column name"` to add a commit message
-8. Enter `git push` to push our changes to push our changes to the feature branch
+8. Enter `git push` to push our changes to the feature branch
    {% include custom/image_popout.html file="acti/fix_our_script_git_3.png" %}
 9. Enter the delphix user password, when prompted
 {% endcapture %}

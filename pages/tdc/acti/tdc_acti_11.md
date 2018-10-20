@@ -24,7 +24,7 @@ While we wait for the remainder of the Automated Testing job to finish, we will 
    In the red box highlighted with the #3 below, you will find the most recent build execution. In the case of the example below, the most recent build had failed. This is why it has a red dot next to it. Yours may be a flashing blue, but it will eventually also turn red. Don’t worry, this is part of our scenario.
    {% include custom/image_popout.html file="acti/some_automation_details_2.png" %}
 
-The `Automated Testing` job only has two functions. First, it detects when code has been pushed to our git repository. Second it executes a sequence of jobs and passes parameters between them. These jobs are listed in order in box #4, above. When jobs have (blocking) listed at the end, that means no other jobs can start until they finish running. Jobs that are in the same Static grouping run together at the same time. Once all blocking jobs in a static group have completed, jobs in the next static group can begin.
+The `Automated Testing` job only has two functions. First, it detects when code has been pushed to our git repository. Second it executes a sequence of jobs and passes parameters between them. These jobs are listed in order in box #4, above. When jobs have (blocking) listed at the end, that means no other jobs can start until they finish running. Jobs that are in the same static grouping run together at the same time. Once all blocking jobs in a static group have completed, jobs in the next static group can begin.
 
 Next we will briefly explain what each job in `Automated Testing` is doing:
 

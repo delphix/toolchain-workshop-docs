@@ -1,6 +1,6 @@
 ---
 title:  Let’s Make Some Changes
-summary: "(Dev Persona) Here we will push some pre-staged changed to our TWITTER feature branch"
+summary: "(Dev Persona) Here we will push some pre-staged changes to our TWITTER feature branch"
 series: "Act I"
 weight: 2
 last_updated: September 11, 2018

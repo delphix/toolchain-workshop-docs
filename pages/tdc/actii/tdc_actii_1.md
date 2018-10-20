@@ -43,7 +43,7 @@ In Act I, we saved the data state of the failed test in our QA data pod. In this
 13. Click Create.
     {% include custom/image_popout.html file="actii/bugs_happen_9.png" %}
 14. Click Timeline.
-15. You will now see the Creating Branch progress bar. When it is complete, proceed to the next step.
+15. You will now see the Creating Branch progress bar. After completion, roceed to the next step.
     {% include custom/image_popout.html file="actii/bugs_happen_10.png" %}
 16. When it is complete, you will see the name of your new branch across the top and you will see that the timeline of the data pod starts from the bookmark you had previously selected.
     {% include custom/image_popout.html file="actii/bugs_happen_11.png" %}
