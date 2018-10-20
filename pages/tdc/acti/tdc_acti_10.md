@@ -29,7 +29,7 @@ In this scene, we are going view the running automation sequence in Jenkins and 
    {% include custom/image_popout.html file="acti/automated_testing_3.png" %}
 7. You should now be in the Data Operations screen. Click on `QA Data Pod` 
    {% include custom/image_popout.html file="acti/automated_testing_4.png" %}
-8. You should now see the timeline for `QA Data Pod` . In a couple minutes, or less, you should see the screen change and a status bar indicating  the progress of “Operating on Container.” This change shows that your the data pod is being refreshed with the latest data from production.
+8. You should now see the timeline for `QA Data Pod` . In a couple minutes, or less, you should see the screen change and a status bar indicating the progress of “Operating on Container.” This change shows that your data pod is being refreshed with the latest data from production.
    {% include custom/image_popout.html file="acti/automated_testing_5.png" %}
 
 {% include links.html %}

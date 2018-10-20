@@ -23,7 +23,7 @@ In this scene, we are going to add a new employee to our production instance and
 
 1. Click the Prod Instance tab
 2. Click the Prod Instance bookmark to refresh (note: Do not use the browser refresh button)
-3. Use the Add Employee form to add someone else to the Employees application. Just make up a Twitter handle, if you don’t have one. Specify ‘1’ for your Employee ID. Click Add to complete the submission
+3. Use the `Add Employee` form to add someone else to the Employees application. Just make up a Twitter handle. Specify ‘1’ for your Employee ID. Click Add to complete the submission
 4. Validate you see your new employee record on the top row of the form and that the changes to Dev were not introduced into Prod
 5. Click the First button to refresh the total rows count (known bug)
 6. Validate you now see 1000001 records in Production
@@ -31,3 +31,9 @@ In this scene, we are going to add a new employee to our production instance and
 8. Validate your data in each environment is unique.
    {% include custom/image_popout.html file="acti/validate_our_build_1.png" %}
 {% include links.html %}
+{:start="9"}
+9. Execute the 'Nightly Test Data Catalog Build' in Jenkins 
+    * Ensure you are logged into Jenkins as Admin (1)
+    * Click the 'Build button' (2)
+    * This should take around 8 minutes to complete
+    {% include custom/image_popout.html file="acti/nightly_catalog_build.png" %}

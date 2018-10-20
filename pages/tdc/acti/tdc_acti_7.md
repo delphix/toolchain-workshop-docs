@@ -12,7 +12,7 @@ toc: false
 <!-- {% include custom/series.html %} -->
 {% include custom/series_next.html %}
 
-We should now see the Twitter column present in our Employees table and in a Twitter filed in our `Add Employee` form. We will also add a new employee to validate our new feature works.
+We should now see the Twitter column present in our Employees table and in a Twitter field in our `Add Employee` form. We will also add a new employee to validate our new feature works.
 
 ### YOUR STEPS FOR THIS SCENE:
 

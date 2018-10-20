@@ -21,7 +21,8 @@ In this scene, we are going to refresh the the QA Instance webpage, validate the
 1. Activate the QA Instance tab
 2. Click the QA Instance bookmark to refresh the page
 3. Click the First button to update the record count.
-4. Validate you see the record we added to production in Act I and that the record count is now 999998
+4. Validate you see the record we added to production in Act I
+    * Remember the data will be masked.
 5. Delete the record we added to production (should be EMPLOYEE_ID 1)
    {% include custom/image_popout.html file="actii/trust_but_verify_1.png" %}
 6. Click the First button to update the record count.
