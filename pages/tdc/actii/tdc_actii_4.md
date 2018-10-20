@@ -34,7 +34,7 @@ In this scene, we are going to switch back to our original data branch to test w
    {% include custom/image_popout.html file="actii/lets_test_again_6.png" %}
 9. Activate the Dev Instance tab
 10. Refresh the page by clicking the Dev Instance bookmark
-11. Validate the dev data from Act I has been restored. Delete the employee you had added previously. This should be employee 1.
+11. Validate the Dev data from Act I has been restored. 
 12. Delete the employee you had added previously. This should be employee 1.
     {% include custom/image_popout.html file="actii/lets_test_again_7.png" %}
 13. Great! Our patch appears to have worked. Only one employee has been deleted. Time to push our changes upstream.

@@ -32,7 +32,8 @@ In this scene, we are going to refresh our `QA Data Pod` with data from producti
 7. When the refresh is complete, activate the QA Instance tab
 8. Click the `QA Instance` bookmark to refresh the page
    {% include custom/image_popout.html file="acti/ready_to_test_again_6.png" %}
-9. You should now see QA populated with the most recent data from production, including your employee record.
+9. You should now see QA populated with the most recent data from production, including your employee record
+    * Your record will now be masked since there is a masking job associated with your QA VDB.
    {% include custom/image_popout.html file="acti/ready_to_test_again_7.png" %}
 
 {% include links.html %}
