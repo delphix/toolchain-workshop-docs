@@ -23,9 +23,8 @@ In this scene, we are going to switch back to our original data branch to test w
    {% include custom/image_popout.html file="actii/lets_test_again_2.png" %}
 4. Click on Branches.
    {% include custom/image_popout.html file="actii/lets_test_again_3.png" %}
-5. Click on default.
+5. Click on TWITTER.
 6. Click Activate.
-   {% include custom/image_popout.html file="actii/lets_test_again_4.png" %}
 7. Click Activate in the dialogue box, to confirm.
    {% include custom/image_popout.html file="actii/lets_test_again_5.png" %}
 8. When the Activating progress bar is complete, proceed to the next step.
