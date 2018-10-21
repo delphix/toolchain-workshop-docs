@@ -75,6 +75,14 @@ entries:
       url: /tdc_acti_8.html
       output: web, pdf
 
+    - title: Updating the Data Catalog
+      url: /tdc_acti_8.1.html
+      output: web, pdf
+
+    - title: Viewing the Data Catalog
+      url: /tdc_acti_8.2.html
+      output: web, pdf
+
     - title: Works in My Environment!
       url: /tdc_acti_9.html
       output: web, pdf
