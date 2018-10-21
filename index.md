@@ -53,18 +53,6 @@ permalink: index.html
 
         </div>
     </div>
-    <div class="seriesContext">
-    <a>
-        {% assign pages = site.pages | sort:"weight"  %}
-        {% for pg in pages %}
-        {% if pg.series == page.series %}
-        {% if pg.weight > page.weight %}
-        <a href="{{pg.url | remove: '/'}}"><button type="button" class="btn btn-primary">Next: {{pg.title}}</button></a>
-        {% break %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-    </a>
 </div>
 
     <!-- Service List -->
