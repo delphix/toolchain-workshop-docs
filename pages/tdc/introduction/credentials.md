@@ -9,8 +9,6 @@ permalink: credentials.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html next_series="Act I Series" %}
 These credentials are listed in the lab documentation where required, but are also gathered here for quick reference.
 
 | Application | Username | Password |

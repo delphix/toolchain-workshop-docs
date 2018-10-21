@@ -9,8 +9,6 @@ permalink: architecture_diagram.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 {% include custom/image_popout.html file="introduction/SDLC-Toolchain-Classroom-Architecture.png" %}
 
