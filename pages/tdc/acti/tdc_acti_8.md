@@ -27,9 +27,9 @@ In this scene, we are going to add a new employee to our production instance and
 4. Validate you see your new employee record on the top row of the form and that the changes to Dev were not introduced into Prod
 5. Click the First button to refresh the total rows count (known bug)
 6. Validate you now see 1000001 records in Production
+    {% include custom/image_popout.html file="acti/add_some_data_to_production_1.png" %}
 7. Go to the Dev Instance and QA Instance tabs and click their bookmarks to refresh the pages.
 8. Validate your data in each environment is unique.
-   {% include custom/image_popout.html file="acti/validate_our_build_1.png" %}
 {% include links.html %}
 {:start="9"}
 9. Execute the 'Nightly Test Data Catalog Build' in Jenkins 
