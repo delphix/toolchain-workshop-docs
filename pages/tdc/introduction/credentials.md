@@ -8,6 +8,7 @@ sidebar: tdc_sidebar
 permalink: credentials.html
 folder: tdc
 toc: false
+next_series: "Act I"
 ---
 These credentials are listed in the lab documentation where required, but are also gathered here for quick reference.
 

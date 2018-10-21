@@ -8,6 +8,7 @@ sidebar: tdc_sidebar
 permalink: tdc_acti_13.html
 folder: tdc
 toc: false
+next_series: "Act II"
 ---
 
 In a normal testing scenario, a failed test might mean that you would have to tie up the QA environment until a developer can login to diagnose, triage, and remediate. With the Delphix DDP, data is never actually deleted or destroyed, except by policy. This means we can free up our environments for further testing, development, etc., as we can recall the previous data state into our data pods at any given time.
