@@ -9,8 +9,6 @@ permalink: tdc_acti_6.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 The `Deploy to Dev` job is triggered automatically again. This time the `Package Database Object Changes` should complete successfully. The complete process can take around 8 minutes.
 

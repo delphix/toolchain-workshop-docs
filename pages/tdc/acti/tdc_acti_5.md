@@ -9,8 +9,6 @@ permalink: tdc_acti_5.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 {% capture eclipse_steps %}
 1. Go back into Eclipse, right-click the maven repository, and click `Pull`

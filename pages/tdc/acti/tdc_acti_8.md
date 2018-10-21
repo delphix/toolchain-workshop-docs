@@ -9,8 +9,6 @@ permalink: tdc_acti_8.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 Data pods are usually copies of active sources, like production applications. That means the data in your source applications continue to change after you have created your data pods. Data pods in the Delphix Dynamic Data Platform (DDP) are fully autonomous and read/write capable. This translates to two very important benefits:
 

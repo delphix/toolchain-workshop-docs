@@ -9,8 +9,6 @@ permalink: tdc_actii_5.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 Our automated test completed successfully, but let’s just do a manual check to be sure.
 

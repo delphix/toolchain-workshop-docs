@@ -9,8 +9,6 @@ permalink: tdc_acti_9.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 Now that we validated our changes worked in our development environment, it is time for us to merge our feature branch to promote our changes along.
 

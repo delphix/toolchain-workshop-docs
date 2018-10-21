@@ -9,8 +9,6 @@ permalink: tdc_actii_4.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 Let’s bring our original data back into our data pod and test against that, just to test our patch again against realistic data.
 

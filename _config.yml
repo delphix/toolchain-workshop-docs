@@ -72,7 +72,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "page"
+      layout: "workshop"
       comments: true
       search: true
       sidebar: home_sidebar

@@ -9,8 +9,6 @@ permalink: tdc_acti_10.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 Once we pushed our code upstream, that triggered an automation testing sequence. The automated testing sequence takes about 5 to 6 minutes to complete. We will make use of the majority of that time in the next scene.
 

@@ -9,8 +9,6 @@ permalink: tdc_acti_1.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 The application for our lab is a basic Employee Records application with 1 million records. The application is written in Java, hosted by Apache, and underpinned by an Oracle 11g database.
 

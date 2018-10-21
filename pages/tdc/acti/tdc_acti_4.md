@@ -9,8 +9,6 @@ permalink: tdc_acti_4.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 RED = BAD. So what happened?
 

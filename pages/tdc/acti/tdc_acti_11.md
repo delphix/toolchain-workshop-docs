@@ -9,8 +9,6 @@ permalink: tdc_acti_11.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 While we wait for the remainder of the Automated Testing job to finish, we will go over some of the details of what is actually happening. The format of this scene will differ a little bit, as you will execute steps as we go along and explain some things.
 

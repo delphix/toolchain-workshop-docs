@@ -9,8 +9,6 @@ permalink: tdc_acti_2.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 We will be using the [Eclipse IDE](https://www.eclipse.org/ide/){:target="_blank"} to make, view, and process our code changes. As we covered before, our initial changes to add the Twitter functionality have been pre-staged, for your convenience. Bring Eclipse to the foreground.
 
@@ -18,12 +16,12 @@ The Staged Changes box in Eclipse shows all of the pre-staged changes for our ap
 
 {% capture eclipse_steps %}
 1. Click on the git repository > maven …..
-1. Enter a commit message, anything will do
-1. Click “Commit and Push”
+2. Enter a commit message, anything will do
+3. Click “Commit and Push”
    {% include custom/image_popout.html file="acti/lets_make_some_changes_eclipse_1.png" %}
-1. You may be prompted for a password. If you are, just enter the delphix user's password and click ok
+4. You may be prompted for a password. If you are, just enter the delphix user's password and click ok
    {% include custom/image_popout.html file="acti/lets_make_some_changes_eclipse_2.png" %}
-1. Click Ok on the result
+5. Click Ok on the result
    {% include custom/image_popout.html file="acti/lets_make_some_changes_eclipse_3.png" %}
 {% endcapture %}
 

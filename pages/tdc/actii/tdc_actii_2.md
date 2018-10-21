@@ -9,8 +9,6 @@ permalink: tdc_actii_2.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 We have now “paused” the data we were previously using and have replaced it with the data from the qa data pod bookmark.
 

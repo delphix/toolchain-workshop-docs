@@ -9,8 +9,6 @@ permalink: tdc_acti_12.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 The `Automated Test` job has a red dot next to it now, which means the testing failed.
 

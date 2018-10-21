@@ -9,8 +9,6 @@ permalink: tdc_acti_3.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 We’ve now kicked off an automated build job, that should take around 50 seconds.
 

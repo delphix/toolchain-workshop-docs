@@ -9,8 +9,6 @@ permalink: tdc_actii_1.html
 folder: tdc
 toc: false
 ---
-<!-- {% include custom/series.html %} -->
-{% include custom/series_next.html %}
 
 If you develop applications for a living, you will be the author of many bugs over the course of your career. One of the challenges of fixing bugs is the ability to reproduce the issue. The easiest way to do this is to see the bug in its failed state. But, when bugs are found upstream, that usually means tying up environments until the developer can “come to your desk” and take a look at the environment to triage the issue.
 
