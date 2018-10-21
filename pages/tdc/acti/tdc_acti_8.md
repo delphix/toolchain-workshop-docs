@@ -28,10 +28,11 @@ In this scene, we are going to add a new employee to our production instance and
     {% include custom/image_popout.html file="acti/add_some_data_to_production_1.png" %}
 7. Go to the Dev Instance and QA Instance tabs and click their bookmarks to refresh the pages.
 8. Validate your data in each environment is unique.
-{% include links.html %}
 {:start="9"}
 9. Execute the 'Nightly Test Data Catalog Build' in Jenkins 
     * Ensure you are logged into Jenkins as Admin (1)
     * Click the 'Build button' (2)
     * This should take around 8 minutes to complete
     {% include custom/image_popout.html file="acti/nightly_catalog_build.png" %}
+
+{% include links.html %}
