@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: GitHub
-      external_url: https://github.com/delphix/toolchain_workshop_docs
+      external_url: https://github.com/delphix/toolchain-workshop-docs
     - title: TDC Demo
       url: /tdc_landing_page.html
 
