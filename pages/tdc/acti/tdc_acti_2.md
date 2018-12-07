@@ -10,7 +10,7 @@ folder: tdc
 toc: false
 ---
 
-We will be using the [Eclipse IDE](https://www.eclipse.org/ide/){:target="_blank"} to make, view, and process our code changes. As we covered before, our initial changes to add the Twitter functionality have been pre-staged, for your convenience. Bring Eclipse to the foreground.
+We will be using the [Eclipse IDE](https://www.eclipse.org/ide/){:target="_blank"} to make, view, and process our code changes. As we covered before, our initial changes to add the Twitter functionality have been pre-staged, for your convenience. Use the Eclipse icon on the desktop to launch Eclipse. This may take a few moments to load.
 
 The Staged Changes box in Eclipse shows all of the pre-staged changes for our application and database.
 
