@@ -35,7 +35,7 @@ In this scene, we are going to update the application code to eliminate the bug.
 
 {% capture eclipse_steps %}
 
-1. Switch to the Java view in Eclipse
+1. Switch to the Git view in Eclipse
 2. Right-click on the maven repository and choose `Switch to -> New Branch...`.
    {% include custom/image_popout.html file="actii/squash_the_bug_eclipse_1.png" %}
 3. Enter the name of the branch. Make this the same as step 12 from the `Bugs Happen` scene, ex. `bug-2`
