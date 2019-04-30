@@ -31,7 +31,7 @@ repository, which will include the latest github-pages plugin required to
 get the repository data:
 
 ```
-	bundle install
+	bundle install --path vendor/bundle
 ```
 
 From then on, you can start the webserver with:
