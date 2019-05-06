@@ -10,22 +10,26 @@ folder: tdc
 toc: false
 ---
 
-We’ve now kicked off an automated build job, that should take around 50 seconds.
+We’ve now kicked off an automated build job, that should take around 6 minutes. We will leverage this time to learn more about the underpinning automation. 
 
 Here is the sequence of automation:
 
-1. Jenkins is notified via a git commit hook.
-2. Jenkins executes the `Deploy to Dev` job, which does the following against our `Dev Instance`:
-   * a maven job to build and deploy the application changes via a new WAR file
+1. Jenkins is notified via a git post_update hook.
+2. Jenkins executes the `Patients Pipeline` job against the `develop` branch, which does the following against our `Patients Dev`:
+   * an Ansible role to compile the application
+   * a Delphix job to refresh the development data pod
    * a Datical job to analyze and package the database object changes from our committed SQL scripts
    * a Datical job to forecast and deploy the packaged changes
+   * an Ansible role to deploy the application
 
 ### YOUR STEPS FOR THIS SCENE:
 
 1. Bring Chrome to the foreground
-2. Click on the Jenkins Tab and `login` as Admin (upper right hand corner)
-3. Click Enable Auto Refresh (this ensures we see the latest info)
-4. Watch the builds
-5. After the builds are done, the deploy job will have a red circle
-   {% include custom/image_popout.html file="acti/were_building_1.png" %}
+2. Click on the `Jenkins` bookmark
+3. Click on `Patients Pipeline`
+    {% include custom/image_popout.html file="acti/were_building_1.png" %}
+4. You should see your build running. You can identify it by your commit message. Click that line.
+    {% include custom/image_popout.html file="acti/were_building_2.png" %}
+5. The build will stop with an error in the `Package and Test SQL Changes` stage
+   {% include custom/image_popout.html file="acti/were_building_3.png" %}
 {% include links.html %}
