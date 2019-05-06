@@ -28,15 +28,17 @@ toc: false
 
 {% capture git_steps %}
 1. Go back to our ssh terminal
-3. Open up the sql file in a text editor, ex. `sql_code/ddl/TWITTER_HANDLE.sql`
+2. Open up the sql file in a text editor, ex. `sql_code/ddl/add_notes.sql`
    {% include custom/image_popout.html file="acti/fix_our_script_git_1.png" %}
-5. We have found the problem, there was an `@` character in the column name. Replace the `@` with an `A` and save the file.
+3. We have found the problem, there was an `@` character in the column name.
    {% include custom/image_popout.html file="acti/fix_our_script_git_2.png" %}
-6. Enter `git add .` to add our changes
-7. Enter `git commit -m "fixed column name"` to add a commit message
-8. Enter `git push` to push our changes to the feature branch
+4. Replace the `@` with an `O` and save the file.
    {% include custom/image_popout.html file="acti/fix_our_script_git_3.png" %}
-9. Enter the delphix user password, when prompted
+5. Enter `git add .` to add our changes
+6. Enter `git commit -m "fixed column name"` to add a commit message
+   {% include custom/image_popout.html file="acti/fix_our_script_git_4.png" %}
+7. Enter `git push` to push our changes to the feature branch
+   {% include custom/image_popout.html file="acti/fix_our_script_git_4.png" %}
 {% endcapture %}
 
 {% include custom/steps.html eclipse_steps=eclipse_steps git_steps=git_steps %}
