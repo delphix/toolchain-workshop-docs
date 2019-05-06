@@ -10,7 +10,7 @@ folder: tdc
 toc: false
 ---
 
-We’ve now kicked off an automated build job, that should take around 6 minutes. We will leverage this time to learn more about the underpinning automation. 
+We’ve now kicked off an automated build of `Patients Pipeline`, that should take around 6 minutes. We will leverage this time to learn more about the underpinning automation. 
 
 Here is the sequence of automation:
 
