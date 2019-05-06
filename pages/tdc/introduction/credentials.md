@@ -15,6 +15,7 @@ These credentials are listed in the lab documentation where required, but are al
 | Application | Username | Password |
 |-------|--------|---------|
 | jumpbox | delphix | delphix |
+| patients | patients_admin | delphix |
 | Delphx DDP self-service | dev | delphix |
 | Delphx DDP self-service | qa | delphix |
 | jenkins | admin | admin |
