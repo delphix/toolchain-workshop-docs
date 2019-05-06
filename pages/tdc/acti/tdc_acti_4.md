@@ -19,5 +19,5 @@ RED = BAD. So what happened?
    {% include custom/image_popout.html file="acti/not_so_fast_1.png" %}
 3. The message in the report indicates that Datical's Deployment Manager caught a SQL rule violation and stopped the build. It appears that our add_notes.sql script had an invalid character in a column name.
    {% include custom/image_popout.html file="acti/not_so_fast_2.png" %}
-4. Review the rest of the report, and then move on to the next act where we will take a look at add_notes.sql to see if we can identify the issue.
+4. Review the rest of the report, and close the tab when you are finished. In the next act where we will take a look at add_notes.sql to see if we can identify the issue.
 {% include links.html %}

@@ -27,8 +27,7 @@ toc: false
 {% endcapture %}
 
 {% capture git_steps %}
-1. Go back to our ssh terminal and enter `git pull`
-2. Enter the delphix user password, when prompted
+1. Go back to our ssh terminal
 3. Open up the sql file in a text editor, ex. `sql_code/ddl/TWITTER_HANDLE.sql`
    {% include custom/image_popout.html file="acti/fix_our_script_git_1.png" %}
 5. We have found the problem, there was an `@` character in the column name. Replace the `@` with an `A` and save the file.
