@@ -15,18 +15,21 @@ Data pods are usually copies of active sources, like production applications. Th
 * Changes to your data sources do not impact your data pods
 * Changes to data pods do not impact other data pods or data sources, like production
 
-In this scene, we are going to add a new employee to our production instance and then validate the data of the development and QA application instances.
+In this scene, we are going to add a new patient to our production instance and then validate the data of the development and QA application instances.
 
 ### YOUR STEPS FOR THIS SCENE:
 
-1. Click the Prod Instance tab
-2. Click the Prod Instance bookmark to refresh (note: Do not use the browser refresh button)
-3. Use the `Add Employee` form to add someone else to the Employees application. Just make up a Twitter handle. Specify ‘1’ for your Employee ID. Click Add to complete the submission
-4. Validate you see your new employee record on the top row of the form and that the changes to Dev were not introduced into Prod
-5. Click the First button to refresh the total rows count (known bug)
-6. Validate you now see 1000001 records in Production
-    {% include custom/image_popout.html file="acti/add_some_data_to_production_1.png" %}
-7. Go to the Dev Instance and QA Instance tabs and click their bookmarks to refresh the pages.
-8. Validate your data in each environment is unique.
+1. Bring Chrome to the foreground
+2. Click on the `Patients PROD` button on the bookmark bar.
+3. Log in to the production instance of the Patients application using [credentials](credentials.html){:target="_blank"}  
+    {% include custom/image_popout.html file="acti/the_app_1.png" %}
+4. If you logged in successfully, you should see a list of patients in your browser  
+    {% include custom/image_popout.html file="acti/the_app_2.png" %}
+5. Click the + icon to open the `Add Patient` form.
+   {% include custom/image_popout.html file="acti/add_some_data_to_production_1.png" %}
+6. Fill out the form with fictitious information. Give it a silly city name. We will use this value later. Then click `Save`. NOTE: Though these labs are isolated, they are not secure. Do not enter real information.
+   {% include custom/image_popout.html file="acti/add_some_data_to_production_2.png" %}
+7. Enter the silly city name from the previous step. Your patient record should show in the search results below. 
+   {% include custom/image_popout.html file="acti/add_some_data_to_production_3.png" %}
 
 {% include links.html %}

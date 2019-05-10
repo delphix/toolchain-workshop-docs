@@ -32,7 +32,7 @@ As we covered before, our initial changes to add the notes functionality have be
    {% include custom/image_popout.html file="acti/lets_make_some_changes_git_1.png" %}
 2. Enter `git status` if you want to see the staged changes. Then type `git commit -m "Notes Field"` to commit the changes
    {% include custom/image_popout.html file="acti/lets_make_some_changes_git_2.png" %}
-3. Enter `git push origin develop` to push our changes to the `develop` branch.
+3. Enter `git push` to push our changes to the `develop` branch.
    {% include custom/image_popout.html file="acti/lets_make_some_changes_git_3.png" %}
 4. You should see some output return in your console with `develop -> develop` at the bottom.
 {% endcapture %}

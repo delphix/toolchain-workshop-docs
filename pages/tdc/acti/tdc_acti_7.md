@@ -14,10 +14,17 @@ We should now see the Twitter column present in our Employees table and in a Twi
 
 ### YOUR STEPS FOR THIS SCENE:
 
-1. Click the `Dev Instance` tab
-2. Click the `Dev Instance` bookmark to refresh (note: Do not use the browser refresh button)
-3. Validate you see the new Twitter features (highlighted below)
-4. Use the `Add Employee` form to add yourself to the Employees application. Just make up a Twitter handle, if you don’t have one. Specify ‘1’ for your Employee ID. Click ‘Add’ to complete the submission
-5. Validate you see your new Employee record on the top row of the form.
+1. Bring Chrome to the foreground
+2. Click on the `Patients DEV` button on the bookmark bar.
+3. Log in to the development instance of the Patients application using [credentials](credentials.html){:target="_blank"}  
    {% include custom/image_popout.html file="acti/validate_our_build_1.png" %}
+4. If you logged in successfully, you should see a list of patients in your browser  
+   {% include custom/image_popout.html file="acti/validate_our_build_2.png" %}
+5. Click the view icon (outlined in yellow above) for one of the patients and inspect the record. You should see the notes field.
+   {% include custom/image_popout.html file="acti/validate_our_build_3.png" %}
+6. Click the ediit icon (pencil) at the top of the record and add a custom note. Then save the record to validate our feature works. 
+   {% include custom/image_popout.html file="acti/validate_our_build_4.png" %}
+7. Repeat step 5 for the same patient and validate your note is present.
+   {% include custom/image_popout.html file="acti/validate_our_build_4.png" %}
+
 {% include links.html %}
