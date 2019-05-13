@@ -17,14 +17,16 @@ If you will be using VS Code, use the VS Code icon on the desktop to launch VS C
 As we covered before, our initial changes to add the notes functionality have been pre-staged, for your convenience.
 
 {% capture eclipse_steps %}
-1. Click on the git repository > maven …..
+1. Launch VS Code, bring it to the foreground, and click on the Source Control Button (in yellow square, below)
 2. Enter a commit message, anything will do
-3. Click “Commit and Push”
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_eclipse_1.png" %}
-4. You may be prompted for a password. If you are, just enter the delphix user's password and click ok
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_eclipse_2.png" %}
-5. Click Ok on the result
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_eclipse_3.png" %}
+3. Click the checkmark icon to commit the changes (in orange circle, below).
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_1.png" %}
+4. Now push the changes. You can do that by either clicking sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `push` (highlighted in blue, below)
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_2.png" %}
+5. Click 'OK' if you are prompted to confirm.
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_3.png" %}
+6. If you are prompted to `periodically run 'git fetch'`, click `No`.
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_4.png" %}
 {% endcapture %}
 
 {% capture git_steps %}
