@@ -11,7 +11,7 @@ toc: false
 ---
 
 {% capture eclipse_steps %}
-1.  Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
+1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
 2. Expand the folders `sql_code->ddl` and double-click on add_notes.sql (designated by a red arrow)
 3. Examine the script 
    {% include custom/image_popout.html file="acti/fix_our_script_vscode_1.png" %}

@@ -22,15 +22,15 @@ In this scene, we will login to the DDP self service and watch the population of
    {% include custom/image_popout.html file="actii/bugs_happen_2.png" %}
 4. If this is your first login, you will be prompted to change the password. Set the password to delphix
    {% include custom/image_popout.html file="actii/bugs_happen_3.png" %}
-5. You should now be in the Data Operations screen. Click on Dev Data Pod
+5. You should now be in the Data Operations screen. Click on `Develop`
    {% include custom/image_popout.html file="actii/bugs_happen_4.png" %}
-6. You should now see the timeline for Dev Data Pod. Click on the Bookmarks button.
+6. You should now see the timeline for `Develop` data pod. Click on the Bookmarks button.
    {% include custom/image_popout.html file="actii/bugs_happen_5.png" %}
-7. Your bookmarks section will be empty, because the dev user has not created any bookmarks yet for their data pod. Click Available.
+7. You will see one bookmark present. This bookmark was created automatically when our first build failed. Click on the bookmark. You can see that the bookmark is tagged with a Bugzilla ticket number and the git commit hash.
    {% include custom/image_popout.html file="actii/bugs_happen_6.png" %}
-8. You should now see bookmarks that have been shared with you via the `Nightly Test Data Catalog Build`.
-   {% include custom/image_popout.html file="acti/viewing_the_data_catalog_1.png" %}
-9. Bookmarks are searchable. Search for the bookmark that corresponds to today's Data Catalog items currently being generated. In the example below, today is October 21, 2018.
-   {% include custom/image_popout.html file="acti/viewing_the_data_catalog_2.png" %}
-10. You might not see anything at the moment, but as the `Nightly Test Data Catalog Build` progresses, you will see new bookmarks become available.
+8. Click `Available` (in yellow rectangle). You should now see bookmarks that have been shared with you via the `Data Pipeline`.
+   {% include custom/image_popout.html file="acti/viewing_the_data_repo_1.png" %}
+9. You might not see anything at the moment, but as the `Data Pipeline` build progresses, you will see new bookmarks become available.
+10. Bookmarks are searchable. Search for the bookmark that corresponds to the `Full` dataset.
+    {% include custom/image_popout.html file="acti/viewing_the_data_repo_2.png" %}
 {% include links.html %}
