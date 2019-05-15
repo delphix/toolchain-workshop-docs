@@ -30,7 +30,8 @@ Now that we validated our changes worked in our development environment, it is t
 {% endcapture %}
 
 {% capture git_steps %}
-1. Go back to our ssh terminal and enter `git pull` This will ensure we have all the latest changes to our feature branch `(do not skip this step)`
+1. Go back to our ssh terminal and enter `git pull` This will ensure we have all the latest changes to our feature branch
+   {% include note.html content="DO NOT SKIP THIS STEP" %}
 3. Enter `git checkout master`
 4. Enter `git merge develop`
    {% include custom/image_popout.html file="acti/works_in_my_environment_git_1.png" %}

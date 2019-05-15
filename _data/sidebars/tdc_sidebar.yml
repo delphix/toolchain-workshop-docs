@@ -83,6 +83,10 @@ entries:
       url: /tdc_acti_8.2.html
       output: web, pdf
 
+  - title: Act II
+    output: web, pdf
+    folderitems:
+
     - title: Works in My Environment!
       url: /tdc_acti_9.html
       output: web, pdf
@@ -102,10 +106,6 @@ entries:
     - title: Ready to Test Again
       url: /tdc_acti_13.html
       output: web, pdf
-
-  - title: Act II
-    output: web, pdf
-    folderitems:
 
     - title: Bugs Happen
       url: /tdc_actii_1.html
