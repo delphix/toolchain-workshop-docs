@@ -1,5 +1,5 @@
 ---
-title:  Viewing the Data Catalog
+title:  Viewing the Data Repository
 summary: "(Dev/QA Persona) What does a self-service data catalog look like?"
 series: "Act I"
 weight: 8.2

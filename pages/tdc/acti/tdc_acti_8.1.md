@@ -1,5 +1,5 @@
 ---
-title:  Updating the Data Catalog
+title:  Updating the Data Repository
 summary: "(Dev/QA Persona) Changes to Production should be represented in lower environments"
 series: "Act I"
 weight: 8.1
