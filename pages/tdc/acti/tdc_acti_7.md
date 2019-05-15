@@ -10,19 +10,20 @@ folder: tdc
 toc: false
 ---
 
-We should now see the Notes field present in our patient record and in a Twitter field in our `Add Employee` form. We will also add a new employee to validate our new feature works.
+We should now see the Notes field present. We will also add a new Patient to validate our new feature works.
 
 ### YOUR STEPS FOR THIS SCENE:
 
 1. Bring Chrome to the foreground
-2. Click on the `Patients DEV` button on the bookmark bar. (Skupp)
+2. Click on the `Patients DEV` button on the bookmark bar.
+{% include warning.html content="you must click on the bookmark to refresh the application, otherwise your changes will not show." %}
 3. Log in to the development instance of the Patients application using [credentials](credentials.html){:target="_blank"}  
    {% include custom/image_popout.html file="acti/validate_our_build_1.png" %}
 4. If you logged in successfully, you should see a list of patients in your browser  
    {% include custom/image_popout.html file="acti/validate_our_build_2.png" %}
 5. Click the view icon (outlined in yellow above) for one of the patients and inspect the record. You should see the notes field.
    {% include custom/image_popout.html file="acti/validate_our_build_3.png" %}
-6. Click the ediit icon (pencil) at the top of the record and add a custom note. Then save the record to validate our feature works. 
+6. Click the edit icon (pencil) at the top of the record and add a custom note. Then save the record to validate our feature works. 
    {% include custom/image_popout.html file="acti/validate_our_build_4.png" %}
 7. Repeat step 5 for the same patient and validate your note is present.
    {% include custom/image_popout.html file="acti/validate_our_build_4.png" %}

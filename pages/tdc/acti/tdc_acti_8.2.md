@@ -1,6 +1,6 @@
 ---
 title:  Viewing the Data Repository
-summary: "(Dev/QA Persona) What does a self-service data catalog look like?"
+summary: "(Dev/QA Persona) What does a self-service data repo look like?"
 series: "Act I"
 weight: 8.2
 last_updated: October 21, 2018
@@ -12,7 +12,7 @@ toc: false
 
 Self Service in the Delphix DDP provides software builders (Dev, Test, etc) with the ability to simply find, select, and provision the data they need, when they need it. The Delphix DDP also provides many other powerful self service controls, some of which will be covered in later scenes. 
 
-In this scene, we will login to the DDP self service and watch the population of the data catalog as the job from the previous scene is completed.
+In this scene, we will login to the DDP self service and watch the population of the data repo as the job from the previous scene is completed.
 
 ### YOUR STEPS FOR THIS SCENE:
 
