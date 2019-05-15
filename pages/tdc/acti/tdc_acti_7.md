@@ -10,12 +10,12 @@ folder: tdc
 toc: false
 ---
 
-We should now see the Twitter column present in our Employees table and in a Twitter field in our `Add Employee` form. We will also add a new employee to validate our new feature works.
+We should now see the Notes field present in our patient record and in a Twitter field in our `Add Employee` form. We will also add a new employee to validate our new feature works.
 
 ### YOUR STEPS FOR THIS SCENE:
 
 1. Bring Chrome to the foreground
-2. Click on the `Patients DEV` button on the bookmark bar.
+2. Click on the `Patients DEV` button on the bookmark bar. (Skupp)
 3. Log in to the development instance of the Patients application using [credentials](credentials.html){:target="_blank"}  
    {% include custom/image_popout.html file="acti/validate_our_build_1.png" %}
 4. If you logged in successfully, you should see a list of patients in your browser  

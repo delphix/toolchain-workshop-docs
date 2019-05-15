@@ -18,7 +18,7 @@ As we covered before, our initial changes to add the notes functionality have be
 
 {% capture eclipse_steps %}
 1. Launch VS Code, bring it to the foreground, and click on the Source Control Button (in yellow square, below)
-2. Enter a commit message, anything will do
+2. Enter a commit message, anything will do (i.e. "Notes Field")
 3. Click the checkmark icon to commit the changes (in orange circle, below).
    {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_1.png" %}
 4. Now push the changes. You can do that by either clicking sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `push` (highlighted in blue, below)
