@@ -1,6 +1,6 @@
 ---
-title:  Let’s test again, with real data
-summary: "(Dev Persona) Test our fix on a larger sample set"
+title:  Oh Snap! A bug!
+summary: "(QA Persona) A software defect is found in our code"
 series: "Act II"
 weight: 4
 last_updated: September 11, 2018
@@ -10,31 +10,33 @@ folder: tdc
 toc: false
 ---
 
-Let’s bring our original data back into our data pod and test against that, just to test our patch again against realistic data.
+The `Automated Test` job has a red dot next to it now, which means the testing failed.
 
-In this scene, we are going to switch back to our original data branch to test with the data we were originally working against.
+In this scene, we will first take a look in Bugzilla to ascertain what happened. Next, we will validate the bug report against what we see in QA. Finally, we will look at the corresponding bookmark on our QA data pod in the Delphix DDP.
 
 ### YOUR STEPS FOR THIS SCENE:
 
-1. Activate the Delphix Engine tab.
-2. Login as dev, if your login has timed out.
-   {% include custom/image_popout.html file="actii/lets_test_again_1.png" %}
-3. Click on Dev Data Pod, if you had to login again.
-   {% include custom/image_popout.html file="actii/lets_test_again_2.png" %}
-4. Click on Branches.
-   {% include custom/image_popout.html file="actii/lets_test_again_3.png" %}
-5. Click on TWITTER.
-6. Click Activate.
-7. Click Activate in the dialogue box, to confirm.
-   {% include custom/image_popout.html file="actii/lets_test_again_5.png" %}
-8. When the Activating progress bar is complete, proceed to the next step.
-   {% include custom/image_popout.html file="actii/lets_test_again_6.png" %}
-9. Activate the Dev Instance tab
-10. Refresh the page by clicking the Dev Instance bookmark
-11. Validate the Dev data from Act I has been restored. 
-12. Delete the employee you had added previously. This should be employee 1.
-    {% include custom/image_popout.html file="actii/lets_test_again_7.png" %}
-13. Great! Our patch appears to have worked. Only one employee has been deleted. Time to push our changes upstream.
-    {% include custom/image_popout.html file="actii/lets_test_again_8.png" %}
-14. Repeat the steps from [Works in My Environment!](tdc_acti_9.html) but substituting your branch name , ex `bug-2` in place of `TWITTER`
+1. Activate the Bugzilla tab.
+2. Click Browse
+   {% include custom/image_popout.html file="acti/oh_snap_a_bug_1.png" %}
+3. Click TestComponent
+   {% include custom/image_popout.html file="acti/oh_snap_a_bug_2.png" %}
+4. Click on the most recent job. It is #3 in the example below. The job name in the summary should match the Automated Testing job number you captured from the last scene.
+   {% include custom/image_popout.html file="acti/oh_snap_a_bug_3.png" %}
+5. View the different objects in the bug. Can you figure out what went wrong?
+6. Click after_test.png. Egads! All 1M employee records have been deleted! That’s not good.
+   {% include custom/image_popout.html file="acti/oh_snap_a_bug_4.png" %}
+7. Let’s reconcile what we see in the screenshot against the QA environment. Activate the QA Instance tab
+8. Click the QA Instance bookmark to refresh the page
+   {% include custom/image_popout.html file="acti/oh_snap_a_bug_5.png" %}
+9. Ack!
+   {% include custom/image_popout.html file="acti/oh_snap_a_bug_6.png" %}
+10. Activate the Delphix Engine tab.
+11. Login as qa, if your login has timed out.
+    {% include custom/image_popout.html file="acti/oh_snap_a_bug_7.png" %}
+12. Click on `QA Data Pod` 
+    {% include custom/image_popout.html file="acti/oh_snap_a_bug_8.png" %}
+13. Click on the most recent bookmark icon. Does it match the job number from the last scene? Does the bug tag on the bookmark match the defect in bugzilla?
+14. The bookmark has been shared back with the developer. Let’s make the dev clean up their own mess.
+    {% include custom/image_popout.html file="acti/oh_snap_a_bug_9.png" %}
 {% include links.html %}

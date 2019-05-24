@@ -1,6 +1,6 @@
 ---
-title:  Bugs Happen
-summary: "(Dev Persona) Using Delphix to quickly triage bugs"
+title:  Works in My Environment!
+summary: "(Dev Persona) Promoting our code"
 series: "Act II"
 weight: 1
 last_updated: September 11, 2018
@@ -10,40 +10,36 @@ folder: tdc
 toc: false
 ---
 
-If you develop applications for a living, you will be the author of many bugs over the course of your career. One of the challenges of fixing bugs is the ability to reproduce the issue. The easiest way to do this is to see the bug in its failed state. But, when bugs are found upstream, that usually means tying up environments until the developer can “come to your desk” and take a look at the environment to triage the issue.
+Now that we validated our changes worked in our development environment, it is time for us to merge our feature branch to promote our changes along.
 
-The Delphix DDP allows you save and share data state between [data pods](https://www.delphix.com/platform/data-pod){:target="_blank"}.. This allows us to treat data as code: cloning and branching as needed. When you can get the exact state of data you need , on demand, your environments and operations are no longer held hostage by data.
+{% capture eclipse_steps %}
+1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
+2. Click the sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `pull`
+   {% include custom/image_popout.html file="acti/works_in_my_environment_vscode_1.png" %}
+3. Click 'OK' if you are prompted to confirm.
+4. Click on `develop` in the checkout menu (in yellow rectangle) and select `master` (in purple oval).
+   {% include custom/image_popout.html file="acti/works_in_my_environment_vscode_2.png" %}
+6. In the `View` menu, select the `Command Palette` (or use CTRL+SHIFT+P).
+7. Type `merge branch` in the dialog box
+   {% include custom/image_popout.html file="acti/works_in_my_environment_vscode_3.png" %}
+8. Select `develop` in the `Select a branch to merge from` dialog box
+   {% include custom/image_popout.html file="acti/works_in_my_environment_vscode_4.png" %}
+9. Click the sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `push`
+   {% include custom/image_popout.html file="acti/works_in_my_environment_vscode_5.png" %}
+3. Click 'OK' if you are prompted to confirm.
+{% endcapture %}
 
-In Act I, we saved the data state of the failed test in our QA data pod. In this scene, we are going to “pause” the current data in our dev data pod, and replace it with the data from the QA bookmark we created in Act I.
+{% capture git_steps %}
+1. Go back to our ssh terminal and enter `git pull` This will ensure we have all the latest changes to our feature branch
+   {% include note.html content="DO NOT SKIP THIS STEP" %}
+3. Enter `git checkout master`
+4. Enter `git merge develop`
+   {% include custom/image_popout.html file="acti/works_in_my_environment_git_1.png" %}
+5. Enter `git push`
+   {% include custom/image_popout.html file="acti/works_in_my_environment_git_2.png" %}
+7. You should see some output return in your console with `master -> master` at the bottom.
+   {% include custom/image_popout.html file="acti/works_in_my_environment_git_3.png" %}
+{% endcapture %}
 
-### YOUR STEPS FOR THIS SCENE:
-
-1. Bring the Delphix Engine tab to the foreground
-2. If you are still logged in as qa, then logout
-   {% include custom/image_popout.html file="actii/bugs_happen_1.png" %}
-3. Login as the dev user. The password is delphix
-   {% include custom/image_popout.html file="actii/bugs_happen_2.png" %}
-4. If this is your first login, you will be prompted to change the password. Set the password to delphix
-   {% include custom/image_popout.html file="actii/bugs_happen_3.png" %}
-5. You should now be in the Data Operations screen. Click on Dev Data Pod
-   {% include custom/image_popout.html file="actii/bugs_happen_4.png" %}
-6. You should now see the timeline for Dev Data Pod. Click on the Bookmarks button.
-   {% include custom/image_popout.html file="actii/bugs_happen_5.png" %}
-7. Your bookmarks section will be empty, because the dev user has not created any bookmarks yet for their data pod. Click Available.
-   {% include custom/image_popout.html file="actii/bugs_happen_6.png" %}
-8. You should now see bookmarks that have been shared with you from other data pods.
-   {% include custom/image_popout.html file="actii/bugs_happen_7.png" %}
-9. Bookmarks are searchable. Search for the bookmark that corresponds to your bug or test from Act I. In the example below, my bug is Bug 2.
-   {% include custom/image_popout.html file="actii/bugs_happen_8.png" %}
-10. Click the boomark.
-11. Click the branch icon
-12. Name the branch after your bug, all lowercase and no spaces. This allows it to be compatible with git branch names. ex. `bug-2`
-13. Click Create.
-    {% include custom/image_popout.html file="actii/bugs_happen_9.png" %}
-14. Click Timeline.
-15. You will now see the Creating Branch progress bar. After completion, proceed to the next step.
-    {% include custom/image_popout.html file="actii/bugs_happen_10.png" %}
-16. When it is complete, you will see the name of your new branch across the top and you will see that the timeline of the data pod starts from the bookmark you had previously selected.
-    {% include custom/image_popout.html file="actii/bugs_happen_11.png" %}
-
+{% include custom/steps.html eclipse_steps=eclipse_steps git_steps=git_steps %}
 {% include links.html %}

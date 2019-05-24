@@ -1,6 +1,6 @@
 ---
-title:  Trust, but Verify
-summary: "(QA Persona) Let's do a manual test, to be sure"
+title:  Ready to Test Again
+summary: "(QA Persona) With Delphix, data never ties up test environments"
 series: "Act II"
 weight: 5
 last_updated: September 11, 2018
@@ -8,22 +8,31 @@ sidebar: tdc_sidebar
 permalink: tdc_actii_5.html
 folder: tdc
 toc: false
+next_series: "Act II"
 ---
 
-Our automated test completed successfully, but let’s just do a manual check to be sure.
+In a normal testing scenario, a failed test might mean that you would have to tie up the QA environment until a developer can login to diagnose, triage, and remediate. With the Delphix DDP, data is never actually deleted or destroyed, except by policy. This means we can free up our environments for further testing, development, etc., as we can recall the previous data state into our data pods at any given time.
 
-In this scene, we are going to refresh the the QA Instance webpage, validate the results, and then do a manual test and validate the results again.
+In this scene, we are going to refresh our `QA Data Pod` with data from production, just to demonstrate the features stated above..
 
 ### YOUR STEPS FOR THIS SCENE:
 
-1. Activate the QA Instance tab
-2. Click the QA Instance bookmark to refresh the page
-3. Click the First button to update the record count.
-4. Validate you see the record we added to production in Act I
-    * Remember the data will be masked.
-5. Delete the record we added to production (should be EMPLOYEE_ID 1)
-   {% include custom/image_popout.html file="actii/trust_but_verify_1.png" %}
-6. Click the First button to update the record count.
-7. Validate you do not see the record we added to production in Act I and that the record count is now 999997
-   {% include custom/image_popout.html file="actii/trust_but_verify_2.png" %}
+1. Activate the Delphix Engine tab
+2. Login as qa, if your login has timed out.
+   {% include custom/image_popout.html file="acti/ready_to_test_again_1.png" %}
+3. Click on `QA Data Pod`, if you had to login again
+   {% include custom/image_popout.html file="acti/ready_to_test_again_2.png" %}
+4. Click the Refresh icon
+   {% include custom/image_popout.html file="acti/ready_to_test_again_3.png" %}
+5. Click Refresh in the dialog box to confirm
+   {% include custom/image_popout.html file="acti/ready_to_test_again_4.png" %}
+6. Monitor your refresh progress
+   {% include custom/image_popout.html file="acti/ready_to_test_again_5.png" %}
+7. When the refresh is complete, activate the QA Instance tab
+8. Click the `QA Instance` bookmark to refresh the page
+   {% include custom/image_popout.html file="acti/ready_to_test_again_6.png" %}
+9. You should now see QA populated with the most recent data from production, including your employee record
+    * Your record will now be masked since there is a masking job associated with your QA VDB.
+   {% include custom/image_popout.html file="acti/ready_to_test_again_7.png" %}
+
 {% include links.html %}

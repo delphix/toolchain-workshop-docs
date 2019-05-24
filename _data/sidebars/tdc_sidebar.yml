@@ -88,41 +88,41 @@ entries:
     folderitems:
 
     - title: Works in My Environment!
-      url: /tdc_acti_9.html
-      output: web, pdf
-
-    - title: Automated Testing
-      url: /tdc_acti_10.html
-      output: web, pdf
-
-    - title: Some Automation Details
-      url: /tdc_acti_11.html
-      output: web, pdf
-
-    - title: Oh Snap! A bug!
-      url: /tdc_acti_12.html
-      output: web, pdf
-
-    - title: Ready to Test Again
-      url: /tdc_acti_13.html
-      output: web, pdf
-
-    - title: Bugs Happen
       url: /tdc_actii_1.html
       output: web, pdf
 
-    - title: Triaging the Bug
+    - title: Automated Testing
       url: /tdc_actii_2.html
       output: web, pdf
 
-    - title: Squash the Bug
+    - title: Some Automation Details
       url: /tdc_actii_3.html
       output: web, pdf
 
-    - title: Let’s test again, with real data
+    - title: Oh Snap! A bug!
       url: /tdc_actii_4.html
       output: web, pdf
 
-    - title: Trust, but Verify
+    - title: Ready to Test Again
       url: /tdc_actii_5.html
+      output: web, pdf
+
+    - title: Bugs Happen
+      url: /tdc_actii_6.html
+      output: web, pdf
+
+    - title: Triaging the Bug
+      url: /tdc_actii_7.html
+      output: web, pdf
+
+    - title: Squash the Bug
+      url: /tdc_actii_8.html
+      output: web, pdf
+
+    - title: Let’s test again, with real data
+      url: /tdc_actii_9.html
+      output: web, pdf
+
+    - title: Trust, but Verify
+      url: /tdc_actii_10.html
       output: web, pdf

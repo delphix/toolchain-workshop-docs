@@ -1,6 +1,6 @@
 ---
-title: Squash the Bug
-summary: "(Dev Persona) fixing our code"
+title:  Some Automation Details
+summary: "(QA Persona) The details of the Automated Testing job"
 series: "Act II"
 weight: 3
 last_updated: September 11, 2018
@@ -10,64 +10,30 @@ folder: tdc
 toc: false
 ---
 
-Now that we have identified the bug, it is time to patch it, test it, and then push it upstream.
+While we wait for the remainder of the Automated Testing job to finish, we will go over some of the details of what is actually happening. The format of this scene will differ a little bit, as you will execute steps as we go along and explain some things.
 
-In this scene, we are going to update the application code to eliminate the bug. Then we will commit our patch and run a couple tests to test it in our environment. Once we are satisfied with our tests, we will push our code upstream.
-    
-{% capture shared_steps %}
-1.  Bring Chrome to the foreground
-2.  Activate the Jenkins tab
-3.  The code that was just committed should have triggered some deployment jobs. Wait for them to finish.
-    {% include custom/image_popout.html file="actii/squash_the_bug_1.png" %}
-4.  Activate the Dev Instance tab
-5.  Refresh the page by clicking the Dev Instance bookmark
-6.  Let’s add some records to test our patch. Add an employee.
-    {% include custom/image_popout.html file="actii/squash_the_bug_2.png" %}
-7.  Add at least one more employee. Add as many as you like.
-    {% include custom/image_popout.html file="actii/squash_the_bug_3.png" %}
-8.  You may need click First or the Dev Instance boomark to refresh the application page to show your new employees.
-    {% include custom/image_popout.html file="actii/squash_the_bug_4.png" %}
-9.  Let’s test the delete function. Delete an employee.
-    {% include custom/image_popout.html file="actii/squash_the_bug_5.png" %}
-10. Great! Only one employee deleted. This is the expected behavior.
-    {% include custom/image_popout.html file="actii/squash_the_bug_6.png" %}
-{% endcapture %}
+### YOUR STEPS FOR THIS SCENE:
 
-{% capture eclipse_steps %}
+1. Activate the [`Jenkins`](https://jenkins.io/){:target="_blank"} tab
+2. Click on the `Automated Testing` job
+   {% include custom/image_popout.html file="acti/some_automation_details_1.png" %}
+3. This brings us to the details of the `Automated Testing` job. On this screen, we will find information about past and current builds. as well as some details about what is inside the job. You will see this page is titled `Project Automated Testing`. Let’s just cover off a couple of Jenkins items. Projects are the construct in Jenkins that you use to define “what to build”.  It is common for people to use the vernacular jobs, in place of projects. Executing a project in Jenkins is called building. It is also common for the term job run, to be used in place of build.  This guide will use these terms interchangeably.
+   
+   In the red box highlighted with the #3 below, you will find the most recent build execution. In the case of the example below, the most recent build had failed. This is why it has a red dot next to it. Yours may be a flashing blue, but it will eventually also turn red. Don’t worry, this is part of our scenario.
+   {% include custom/image_popout.html file="acti/some_automation_details_2.png" %}
 
-1. Switch to the Git view in Eclipse
-2. Right-click on the maven repository and choose `Switch to -> New Branch...`.
-   {% include custom/image_popout.html file="actii/squash_the_bug_eclipse_1.png" %}
-3. Enter the name of the branch. Make this the same as step 12 from the `Bugs Happen` scene, ex. `bug-2`
-4. Check the box to `Configure upstream for push and pull`
-5. Click `Finish`
-   {% include custom/image_popout.html file="actii/squash_the_bug_eclipse_2.png" %}
-6. Remove the html comment tags from line 24 of the deletedb_app.jsp tab. The comment tags are ‘<%–‘ and ‘–%>’. Look to the image below for an example of what line 24 should look like when your edits are complete.
-7. Notice the deletedb_app.jsp tab has an asterisk on it. This denotes that there are unsaved changes for this tab.
-8. Save your changes by clicking the save icon.
-   {% include custom/image_popout.html file="actii/squash_the_bug_eclipse_3.png" %}
-9. The deletedb_app.jsp tab should no longer have an asterisk.
-   {% include custom/image_popout.html file="actii/squash_the_bug_eclipse_4.png" %}
-10. Activate the Git Staging tab
-11. Drag the deletedb_app.jsp from Unstaged Changes to Staged Changes
-12. Enter something for a Commit Message
-13. Click `Commit and Push`
-    {% include custom/image_popout.html file="actii/squash_the_bug_eclipse_5.png" %}
-{{ shared_steps }}
-{% endcapture %}
+The `Automated Testing` job only has two functions. First, it detects when code has been pushed to our git repository. Second it executes a sequence of jobs and passes parameters between them. These jobs are listed in order in box #4, above. When jobs have (blocking) listed at the end, that means no other jobs can start until they finish running. Jobs that are in the same static grouping run together at the same time. Once all blocking jobs in a static group have completed, jobs in the next static group can begin.
 
-{% capture git_steps %}
-1. Create new branch in git for our fix work, `git checkout -b bug-#` where this is the same as step 12 from the `Bugs Happen` scene, ex. `bug-2`
-2. Open up the `employee-app/src/main/webapp/deletedb_app.jsp` file in a text editor
-   {% include custom/image_popout.html file="actii/squash_the_bug_git_1.png" %}
-3. Remove the html comment tags from line 24 of the deletedb_app.jsp tab. The comment tags are ‘<%–‘ and ‘–%>’.
-4. Stage the change, `git add .`
-5. Commit the change, `git commit -m "fixed bug-2"
-6. Push the change, `git push origin bug-2`
-   {% include custom/image_popout.html file="actii/squash_the_bug_git_2.png" %}
-{{ shared_steps }}
-{% endcapture %}
+Next we will briefly explain what each job in `Automated Testing` is doing:
 
-{% include custom/steps.html eclipse_steps=eclipse_steps git_steps=git_steps %}
+* Snapshot dSource or VDB – This job tells the Delphix DDP to ensure it has the latest changes from our production instance.
+* Refresh `QA Data Pod`  – This job tells the Delphix DDP to refresh the QA data pod from the most recent data it has from our production instance.
+* Deploy Application – This job pulls the latest application code from our [Git](https://git-scm.com/){:target="_blank"} repository and then executes a [Maven](Maven){:target="_blank"}  build to create the new WAR (Java `W`eb `A`pplication `R`esource) and deploy it to our QA instance of [Apache Tomcat](http://tomcat.apache.org/){:target="_blank"} .
+* Deploy Database Object Changes – This job pulls the latest database schema/object changes from our Git repository and then executes a [Datical](http://www.datical.com/){:target="_blank"}  build to apply those changes to the data in our QA data pod.
+* Selenium Application Test – This job triggers a [Selenium](http://www.seleniumhq.org/){:target="_blank"}  test against our QA instance. The test checks a few things like page title, the presences of certain fields, and also the function that removes employees from the system. The test also takes screen shots of the application, at various points. If the test fails, it triggers the file bug job.
+* file bug – Though not listed on this screen, it is an important part of this flow. In the event that the Selenium test fails, this job opens a defect in [Bugzilla](https://www.bugzilla.org/){:target="_blank"} . It also attaches the test results and any screen shots the test may have captured. After the defect is filed, the job tells the Delphix DDP to create a bookmark on the QA data pod and to tag it with important metadata from the build, like the test name, the defect number, and [Git hash](https://help.github.com/articles/github-glossary/#commit){:target="_blank"} .
 
+Now, feel free to explore around until your `Automated Testing` job completes. Just be sure to `not click Save or Apply,` and you should be able to stay clear of doing any real damage.
+
+Once the `Automated Testing` job has completed (failed), take note of the job number (it is 98 in the image above). Once you have that number, you are ready for the next scene.
 {% include links.html %}
