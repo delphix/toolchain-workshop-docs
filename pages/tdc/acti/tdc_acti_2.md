@@ -10,7 +10,7 @@ folder: tdc
 toc: false
 ---
 
-For this workshop we have provided two modalities to make, view, and process our code changes. If you are more of a graphical interface user, then you can follow the path using [VS Code](https://code.visualstudio.com/){:target="_blank"}. If you are a command-line user, then you can follow the path using ssh & git. You will follow either the VS Code steps or the git steps. You will not do both.
+For this workshop we have provided two modalities to make, view, and process our code changes. If you are more of a graphical interface user, then you can follow the path using [VS Code](https://code.visualstudio.com/){:target="_blank"}. If you are a command-line user, then you can follow the path using the terminal & git. You will follow either the VS Code steps or the git steps. You will not do both.
 
 If you will be using VS Code, use the VS Code icon on the desktop to launch VS Code. This may take a few moments to load.
 
