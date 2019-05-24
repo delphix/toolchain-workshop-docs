@@ -1,0 +1,128 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: TCW
+  product: tcw
+  version: 2.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Introduction
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /index.html
+      output: web
+
+    - title: Lab Flow Diagram
+      url: /lab_flow_diagram.html
+      output: web, pdf
+    
+    - title: Architecture Diagram
+      url: /architecture_diagram.html
+      output: web, pdf
+    
+    - title: Credentials Quick Reference
+      url: /credentials.html
+      output: web, pdf
+
+  - title: Act I - Build
+    output: web, pdf
+    folderitems:
+
+    - title: The App
+      url: /tcw_acti_1.html
+      output: web, pdf
+    
+    - title: Add some data to Production
+      url: /tcw_acti_1.1.html
+      output: web, pdf
+
+    - title: Updating the Data Repository
+      url: /tcw_acti_1.2.html
+      output: web, pdf
+
+    - title: Viewing the Data Repository
+      url: /tcw_acti_1.3.html
+      output: web, pdf
+
+    - title: Let’s Make Some Changes
+      url: /tcw_acti_2.html
+      output: web, pdf
+
+    - title: We're Building!
+      url: /tcw_acti_3.html
+      output: web, pdf
+
+    - title: Not So Fast!
+      url: /tcw_acti_4.html
+      output: web, pdf
+
+    - title: Fix Our Script
+      url: /tcw_acti_5.html
+      output: web, pdf
+
+    - title: We're Building! (Again)
+      url: /tcw_acti_6.html
+      output: web, pdf
+
+    - title: Validate Our Build
+      url: /tcw_acti_7.html
+      output: web, pdf
+
+  - title: Act II - Test
+    output: web, pdf
+    folderitems:
+
+    - title: Works in My Environment!
+      url: /tcw_actii_1.html
+      output: web, pdf
+
+    - title: Automated Testing
+      url: /tcw_actii_2.html
+      output: web, pdf
+
+    - title: Some Automation Details
+      url: /tcw_actii_3.html
+      output: web, pdf
+
+    - title: Oh Snap! A bug!
+      url: /tcw_actii_4.html
+      output: web, pdf
+
+    - title: Ready to Test Again
+      url: /tcw_actii_5.html
+      output: web, pdf
+
+    - title: Bugs Happen
+      url: /tcw_actii_6.html
+      output: web, pdf
+
+    - title: Triaging the Bug
+      url: /tcw_actii_7.html
+      output: web, pdf
+
+    - title: Squash the Bug
+      url: /tcw_actii_8.html
+      output: web, pdf
+
+    - title: Let’s test again, with real data
+      url: /tcw_actii_9.html
+      output: web, pdf
+
+    - title: Trust, but Verify
+      url: /tcw_actii_10.html
+      output: web, pdf

@@ -2,8 +2,8 @@
 title: The Delphix Toolchain Workshop
 series: "Intro"
 weight: 1
-keywords: tdc
-sidebar: tdc_sidebar
+keywords: tcw
+sidebar: tcw_sidebar
 toc: false
 permalink: index.html
 ---

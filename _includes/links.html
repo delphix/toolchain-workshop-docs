@@ -22,13 +22,13 @@
 
 {% comment %} Get links from topnav {% endcomment %}
 
-{% for entry in site.data.topnav.topnav %}
+{% comment %} {% for entry in site.data.topnav.topnav %}
 {% for item in entry.items %}
 {% if item.external_url == null %}
 [{{item.url | remove: "/" | remove: ".html"}}]: {{item.url | remove: "/"}}
 {% endif %}
 {% endfor %}
-{% endfor %}
+{% endfor %} {% endcomment %}
 
 {% comment %}Get links from topnav dropdowns {% endcomment %}
 
