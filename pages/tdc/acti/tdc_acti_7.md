@@ -21,11 +21,13 @@ We should now see the Notes field present. We will also add a new Patient to val
    {% include custom/image_popout.html file="acti/validate_our_build_1.png" %}
 4. If you logged in successfully, you should see a list of patients in your browser  
    {% include custom/image_popout.html file="acti/validate_our_build_2.png" %}
-5. Click the view icon (outlined in yellow above) for one of the patients and inspect the record. You should see the notes field.
+5. Enter the silly city name from the earlier scene into the search field
    {% include custom/image_popout.html file="acti/validate_our_build_3.png" %}
-6. Click the edit icon (pencil) at the top of the record and add a custom note. Then save the record to validate our feature works. 
+6. Click the view icon (outlined in yellow above) for one of the patients and inspect the record. You should see the notes field.
    {% include custom/image_popout.html file="acti/validate_our_build_4.png" %}
-7. Repeat step 5 for the same patient and validate your note is present.
-   {% include custom/image_popout.html file="acti/validate_our_build_4.png" %}
+7. Click the edit icon (pencil) at the top of the record and add a custom note. Then save the record to validate our feature works. 
+   {% include custom/image_popout.html file="acti/validate_our_build_5.png" %}
+8. Repeat steps 3 & 4 for the same patient and validate your note is present.
+   {% include custom/image_popout.html file="acti/validate_our_build_6.png" %}
 
 {% include links.html %}

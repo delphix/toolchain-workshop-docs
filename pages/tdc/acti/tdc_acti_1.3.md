@@ -2,10 +2,10 @@
 title:  Viewing the Data Repository
 summary: "(Dev/QA Persona) What does a self-service data repo look like?"
 series: "Act I"
-weight: 8.2
+weight: 1.3
 last_updated: October 21, 2018
 sidebar: tdc_sidebar
-permalink: tdc_acti_8.2.html
+permalink: tdc_acti_1.3.html
 folder: tdc
 toc: false
 ---

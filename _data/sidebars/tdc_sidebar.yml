@@ -46,6 +46,18 @@ entries:
     - title: The App
       url: /tdc_acti_1.html
       output: web, pdf
+    
+    - title: Add some data to Production
+      url: /tdc_acti_1.1.html
+      output: web, pdf
+
+    - title: Updating the Data Repository
+      url: /tdc_acti_1.2.html
+      output: web, pdf
+
+    - title: Viewing the Data Repository
+      url: /tdc_acti_1.3.html
+      output: web, pdf
 
     - title: Let’s Make Some Changes
       url: /tdc_acti_2.html
@@ -69,18 +81,6 @@ entries:
 
     - title: Validate Our Build
       url: /tdc_acti_7.html
-      output: web, pdf
-
-    - title: Add some data to Production
-      url: /tdc_acti_8.html
-      output: web, pdf
-
-    - title: Updating the Data Repository
-      url: /tdc_acti_8.1.html
-      output: web, pdf
-
-    - title: Viewing the Data Repository
-      url: /tdc_acti_8.2.html
       output: web, pdf
 
   - title: Act II
