@@ -14,7 +14,8 @@ Now that we validated our changes worked in our development environment, it is t
 
 {% capture eclipse_steps %}
 1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
-2. Click the sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `pull`
+2. Click the sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `pull`  
+   {% include note.html content="DO NOT SKIP THIS STEP" %}
    {% include custom/image_popout.html file="actii/works_in_my_environment_vscode_1.png" %}
 3. Click 'OK' if you are prompted to confirm.
 4. Click on `develop` in the checkout menu (in yellow rectangle) and select `master` (in purple oval).

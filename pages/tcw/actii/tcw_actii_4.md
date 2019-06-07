@@ -10,33 +10,48 @@ folder: tcw
 toc: false
 ---
 
-The `Automated Test` job has a red dot next to it now, which means the testing failed.
+Our Job completed, but the build is unstable (orange with an `!`).
+It appears that our tests have failed in the `Automated Testing` phase.
 
-In this scene, we will first take a look in Bugzilla to ascertain what happened. Next, we will validate the bug report against what we see in QA. Finally, we will look at the corresponding bookmark on our QA data pod in the Delphix DDP.
+In this scene, we will first take a look at the test artifacts in Jenkins to ascertain what happened.
+Next, we will login to Bugzilla and validate the bug report against what we see in QA.
+Finally, we will look at the corresponding bookmark on our `Test` data pod in the Delphix DDP.
 
 ### YOUR STEPS FOR THIS SCENE:
 
-1. Activate the Bugzilla tab.
-2. Click Browse
-   {% include custom/image_popout.html file="acti/oh_snap_a_bug_1.png" %}
-3. Click TestComponent
-   {% include custom/image_popout.html file="acti/oh_snap_a_bug_2.png" %}
-4. Click on the most recent job. It is #3 in the example below. The job name in the summary should match the Automated Testing job number you captured from the last scene.
-   {% include custom/image_popout.html file="acti/oh_snap_a_bug_3.png" %}
-5. View the different objects in the bug. Can you figure out what went wrong?
-6. Click after_test.png. Egads! All 1M employee records have been deleted! That’s not good.
-   {% include custom/image_popout.html file="acti/oh_snap_a_bug_4.png" %}
-7. Let’s reconcile what we see in the screenshot against the QA environment. Activate the QA Instance tab
-8. Click the QA Instance bookmark to refresh the page
-   {% include custom/image_popout.html file="acti/oh_snap_a_bug_5.png" %}
-9. Ack!
-   {% include custom/image_popout.html file="acti/oh_snap_a_bug_6.png" %}
-10. Activate the Delphix Engine tab.
-11. Login as qa, if your login has timed out.
-    {% include custom/image_popout.html file="acti/oh_snap_a_bug_7.png" %}
-12. Click on `QA Data Pod` 
-    {% include custom/image_popout.html file="acti/oh_snap_a_bug_8.png" %}
-13. Click on the most recent bookmark icon. Does it match the job number from the last scene? Does the bug tag on the bookmark match the defect in bugzilla?
-14. The bookmark has been shared back with the developer. Let’s make the dev clean up their own mess.
-    {% include custom/image_popout.html file="acti/oh_snap_a_bug_9.png" %}
+1. Activate the Jenkins tab
+2. Click on the `Tests` button (in purple rectangle below)
+   {% include custom/image_popout.html file="actii/oh_snap_a_bug_1.png" %}
+3. We can see from this screen that the `Add Duplicate User` test failed (a duplicate user was allowed)
+   {% include custom/image_popout.html file="actii/oh_snap_a_bug_2.png" %}
+4. The test failure created a bug. Let's check that out.
+5. Activate the Bugzilla tab.
+6. Click Browse
+   {% include custom/image_popout.html file="actii/oh_snap_a_bug_3.png" %}
+7. Click TestComponent
+   {% include custom/image_popout.html file="actii/oh_snap_a_bug_4.png" %}
+8. Click on the most recent job. It is #3 in the example below.
+   {% include custom/image_popout.html file="actii/oh_snap_a_bug_5.png" %}
+9. Scrolling to the bottom of the bug, we can see the test results and reported failure.
+   {% include custom/image_popout.html file="actii/oh_snap_a_bug_6.png" %}
+10. Let’s reconcile what we see in the bug report and test results against the QA environment.
+Click the `Patients QA` bookmark.
+11. Log in to the QA instance of the Patients application using [credentials](credentials.html){:target="_blank"}  
+    {% include custom/image_popout.html file="actii/oh_snap_a_bug_7.png" %}
+12. If you logged in successfully, you should see a list of patients in your browser  
+    {% include custom/image_popout.html file="actii/oh_snap_a_bug_8.png" %}
+13. The test report indicated that it failed because it was able to add a duplicate user. Click the `Users` button (purple rectangle below)
+14. Ack! We do have to users with the same username `mcred`. This could cause significant issues as our product rollout expands.
+    {% include custom/image_popout.html file="actii/oh_snap_a_bug_9.png" %}
+15. Activate the Dynamic Data Platform tab.
+16. Login as qa, if your login has timed out.
+    {% include custom/image_popout.html file="actii/automated_testing_4.png" %}
+17. Click on `Test` 
+    {% include custom/image_popout.html file="actii/automated_testing_6.png" %}
+18. Click on the most recent bookmark icon.
+Does it match the job number from Jenkins?
+Does the bug tag on the bookmark match the defect in bugzilla?
+    {% include custom/image_popout.html file="actii/oh_snap_a_bug_10.png" %}
+19. The bookmark has been shared back with the developer. Let’s make the dev clean up their own mess.
+
 {% include links.html %}
