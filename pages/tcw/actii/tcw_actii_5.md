@@ -33,7 +33,7 @@ just to demonstrate the features stated above...
    {% include custom/image_popout.html file="actii/ready_to_test_again_3.png" %}
 7. Once the refresh is complete, we need to redeploy the QA app from a stable state.
 This takes about 60 seconds.
-8. Open a terminal window and type `bounce_qa`
+8. Open a terminal window and type `deploy_qa HEAD~3`
    {% include custom/image_popout.html file="actii/ready_to_test_again_4.png" %}
    {% include custom/image_popout.html file="actii/ready_to_test_again_5.png" %}
 8. Once that is complete, click the `Patients QA` bookmark to refresh the page
