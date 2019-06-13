@@ -1,6 +1,6 @@
 ---
-title:  Let’s test again, with real data
-summary: "(Dev Persona) Test our fix on a larger sample set"
+title:  Deploy to Production
+summary: "(Dev Persona) Let's Deploy Our Feature to Production!"
 series: "Act II"
 weight: 9
 last_updated: September 11, 2018
@@ -14,27 +14,50 @@ Let’s bring our original data back into our data pod and test against that, ju
 
 In this scene, we are going to switch back to our original data branch to test with the data we were originally working against.
 
-### YOUR STEPS FOR THIS SCENE:
+{% capture shared_steps %}
+1. With our testing success, it's time to push our feature to production.
+2. Repeat the merge and push steps for the `production` branch
+{% endcapture %}
 
-1. Activate the Delphix Engine tab.
-2. Login as dev, if your login has timed out.
-   {% include custom/image_popout.html file="actii/lets_test_again_1.png" %}
-3. Click on Dev Data Pod, if you had to login again.
-   {% include custom/image_popout.html file="actii/lets_test_again_2.png" %}
-4. Click on Branches.
-   {% include custom/image_popout.html file="actii/lets_test_again_3.png" %}
-5. Click on TWITTER.
-6. Click Activate.
-7. Click Activate in the dialogue box, to confirm.
-   {% include custom/image_popout.html file="actii/lets_test_again_5.png" %}
-8. When the Activating progress bar is complete, proceed to the next step.
-   {% include custom/image_popout.html file="actii/lets_test_again_6.png" %}
-9. Activate the Dev Instance tab
-10. Refresh the page by clicking the Dev Instance bookmark
-11. Validate the Dev data from Act I has been restored. 
-12. Delete the employee you had added previously. This should be employee 1.
-    {% include custom/image_popout.html file="actii/lets_test_again_7.png" %}
-13. Great! Our patch appears to have worked. Only one employee has been deleted. Time to push our changes upstream.
-    {% include custom/image_popout.html file="actii/lets_test_again_8.png" %}
-14. Repeat the steps from [Works in My Environment!](tcw_acti_9.html) but substituting your branch name , ex `bug-2` in place of `TWITTER`
+{% capture post_push %}
+1. Now you can watch the `production` pipeline job build in Jenkins.
+   {% include custom/image_popout.html file="actii/deploy_to_production_1.png" %}
+2. Once the pipeline build is complete, click the `Patients PROD` bookmark and login to the application.
+Search for your "ficticious user" from the very first scene of this workshop.
+   {% include custom/image_popout.html file="actii/deploy_to_production_2.png" %}
+3. Click view and validate you see the `Notes` field. 
+   {% include custom/image_popout.html file="actii/deploy_to_production_3.png" %}
+4. Congratulations! You have successfully pushed your feature to production!
+{% endcapture %}
+
+{% capture vscode_steps %}
+{{ shared_steps }}
+1. Click `master` and then choose `origin/production` from the dropdown menu
+    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_7.png" %}
+17. Click `master` and then choose `origin/production` from the dropdown menu
+    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_7.png" %}
+18. Go to `View->Command Palette`
+    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_8.png" %}
+19. Type `Merge` in the drop down box and select `Git Merge Branch...` from the dropdown menu
+    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_9.png" %}
+20. Choose `master` from the dropdown menu
+    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_10.png" %}
+21. Click the sync putton to push the changes. Click OK, if prompted.
+    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_11.png" %}
+{{ post_push }}
+{% endcapture %}
+
+{% capture git_steps %}
+{{ shared_steps }}
+```bash
+git checkout production
+git merge master
+git push
+```
+   {% include custom/image_popout.html file="actii/squash_the_bug_git_3.png" %}
+{{ post_push }}
+{% endcapture %}
+
+{% include custom/steps.html vscode_steps=vscode_steps git_steps=git_steps %}
+
 {% include links.html %}

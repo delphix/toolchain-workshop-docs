@@ -58,8 +58,5 @@ Click Available.
     {% include custom/image_popout.html file="actii/bugs_happen_11.png" %}
 18. Open a terminal window and enter `deploy_dev <git commit hash>`.
     {% include custom/image_popout.html file="actii/bugs_happen_12.png" %}
-19. Open `Patients Dev` in a new tab. Login, and go to the Users section.
-You should now see we have replicated the "broken test" environment.
-    {% include custom/image_popout.html file="actii/bugs_happen_13.png" %}
 
 {% include links.html %}

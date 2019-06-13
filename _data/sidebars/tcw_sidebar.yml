@@ -119,10 +119,6 @@ entries:
       url: /tcw_actii_8.html
       output: web, pdf
 
-    - title: Let’s test again, with real data
+    - title: Deploy to Production
       url: /tcw_actii_9.html
-      output: web, pdf
-
-    - title: Trust, but Verify
-      url: /tcw_actii_10.html
       output: web, pdf

@@ -12,7 +12,7 @@ toc: false
 
 Now that we validated our changes worked in our development environment, it is time for us to merge our feature branch to promote our changes along.
 
-{% capture eclipse_steps %}
+{% capture vscode_steps %}
 1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
 2. Click the sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `pull`  
    {% include note.html content="DO NOT SKIP THIS STEP" %}
@@ -42,5 +42,5 @@ Now that we validated our changes worked in our development environment, it is t
 7. You should see some output return in your console with `master -> master` at the bottom.
 {% endcapture %}
 
-{% include custom/steps.html eclipse_steps=eclipse_steps git_steps=git_steps %}
+{% include custom/steps.html vscode_steps=vscode_steps git_steps=git_steps %}
 {% include links.html %}

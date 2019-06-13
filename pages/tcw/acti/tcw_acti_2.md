@@ -16,7 +16,7 @@ If you will be using VS Code, use the VS Code icon on the desktop to launch VS C
 
 As we covered before, our initial changes to add the notes functionality have been pre-staged, for your convenience.
 
-{% capture eclipse_steps %}
+{% capture vscode_steps %}
 1. Launch VS Code, bring it to the foreground, and click on the Source Control Button (in yellow square, below)
 2. Enter a commit message, anything will do (i.e. "Notes Field")
 3. Click the checkmark icon to commit the changes (in orange circle, below).
@@ -39,6 +39,6 @@ As we covered before, our initial changes to add the notes functionality have be
 4. You should see some output return in your console with `develop -> develop` at the bottom.
 {% endcapture %}
 
-{% include custom/steps.html eclipse_steps=eclipse_steps git_steps=git_steps %}
+{% include custom/steps.html vscode_steps=vscode_steps git_steps=git_steps %}
 
 {% include links.html %}
