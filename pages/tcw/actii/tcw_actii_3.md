@@ -9,13 +9,14 @@ permalink: tcw_actii_3.html
 folder: tcw
 toc: false
 ---
+{% include warning.html content="OUTDATED, TO BE REPLACED" %}
 
-While we wait for the remainder of the Automated Testing job to finish, we will go over some of the details of what is actually happening.
+While we wait for the remainder of the `master` pipeline build job to finish, we will go over some of the details of what is actually happening.
 The format of this scene will differ a little bit, as you will execute steps as we go along and explain some things.
 
 ### YOUR STEPS FOR THIS SCENE:
 
-1. Activate the [`Jenkins`](https://jenkins.io/){:target="_blank"} tab
+1. Click the `Jenkins` bookmark
 2. Click on the `Automated Testing` job
    {% include custom/image_popout.html file="acti/some_automation_details_1.png" %}
 3. This brings us to the details of the `Automated Testing` job. On this screen, we will find information about past and current builds. as well as some details about what is inside the job. You will see this page is titled `Project Automated Testing`. Let’s just cover off a couple of Jenkins items. Projects are the construct in Jenkins that you use to define “what to build”.  It is common for people to use the vernacular jobs, in place of projects. Executing a project in Jenkins is called building. It is also common for the term job run, to be used in place of build.  This guide will use these terms interchangeably.
