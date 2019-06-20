@@ -1,48 +1,36 @@
 ---
-title:  Fix Our Script
-summary: "(Dev Persona) Fixing our script's policy violation"
+title:  Viewing the Data Repository
+summary: "(Dev/QA Persona) What does a self-service data repo look like?"
 series: "Act I"
 weight: 5
-last_updated: September 11, 2018
+last_updated: October 21, 2018
 sidebar: tcw_sidebar
 permalink: tcw_acti_5.html
 folder: tcw
 toc: false
 ---
 
-{% capture vscode_steps %}
-1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
-2. Expand the folders `sql_code->ddl` and double-click on add_notes.sql (designated by a red arrow)
-3. Examine the script 
-   {% include custom/image_popout.html file="acti/fix_our_script_vscode_1.png" %}
-4. We have found the problem, there was an `@` character in the column name. Replace the `@` symbol (highlighted in a blue rectangle above) with the letter captial `O`. Save the file.
-   {% include custom/image_popout.html file="acti/fix_our_script_vscode_2.png" %}
-5. Click on the Source Control Button, click on add_notes.sql under changes, and then click on the plus directly to the right (yellow box) to add the file to git.
-   {% include custom/image_popout.html file="acti/fix_our_script_vscode_3.png" %}
-6. Enter a commit message, anything will do (i.e. "fixed column name")
-7. Click the checkmark icon to commit the changes (in orange circle, below).
-   {% include custom/image_popout.html file="acti/fix_our_script_vscode_4.png" %}
-8. Now push the changes. You can do that by either clicking sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `push` (highlighted in blue, below)
-   {% include custom/image_popout.html file="acti/fix_our_script_vscode_5.png" %}
-9. Click 'OK' if you are prompted to confirm.
+Self Service in the Delphix DDP provides software builders (Dev, Test, etc) with the ability to simply find, select, and provision the data they need, when they need it. The Delphix DDP also provides many other powerful self service controls, some of which will be covered in later scenes. 
 
-{% endcapture %}
+In this scene, we will login to the DDP self service and watch the population of the data repo as the job from the previous scene is completed.
 
-{% capture git_steps %}
-1. Go back to our ssh terminal
-2. Open up the sql file in a text editor, ex. `sql_code/ddl/add_notes.sql`
-   {% include custom/image_popout.html file="acti/fix_our_script_git_1.png" %}
-3. We have found the problem, there was an `@` character in the column name.
-   {% include custom/image_popout.html file="acti/fix_our_script_git_2.png" %}
-4. Replace the `@` with an `O` and save the file.
-   {% include custom/image_popout.html file="acti/fix_our_script_git_3.png" %}
-5. Enter `git add .` to add our changes
-6. Enter `git commit -m "fixed column name"` to add a commit message
-   {% include custom/image_popout.html file="acti/fix_our_script_git_4.png" %}
-7. Enter `git push` to push our changes to the feature branch
-   {% include custom/image_popout.html file="acti/fix_our_script_git_4.png" %}
-{% endcapture %}
+### YOUR STEPS FOR THIS SCENE:
 
-{% include custom/steps.html vscode_steps=vscode_steps git_steps=git_steps %}
-
+1. Bring the Delphix Engine tab to the foreground
+2. Logout, if you are currently logged in.
+3. Login as the dev user. The password is delphix
+   {% include custom/image_popout.html file="actii/bugs_happen_2.png" %}
+4. If this is your first login, you will be prompted to change the password. Set the password to delphix
+   {% include custom/image_popout.html file="actii/bugs_happen_3.png" %}
+5. You should now be in the Data Operations screen. Click on `Develop`
+   {% include custom/image_popout.html file="actii/bugs_happen_4.png" %}
+6. You should now see the timeline for `Develop` data pod. Click on the Bookmarks button.
+   {% include custom/image_popout.html file="actii/bugs_happen_5.png" %}
+7. You will see one bookmark present. This bookmark was created automatically when our first build failed. Click on the bookmark. You can see that the bookmark is tagged with a Bugzilla ticket number and the git commit hash.
+   {% include custom/image_popout.html file="actii/bugs_happen_6.png" %}
+8. Click `Available` (in yellow rectangle). You should now see bookmarks that have been shared with you via the `Data Pipeline`.
+   {% include custom/image_popout.html file="acti/viewing_the_data_repo_1.png" %}
+9. You might not see anything at the moment, but as the `Data Pipeline` build progresses, you will see new bookmarks become available.
+10. Bookmarks are searchable. Search for the bookmark that corresponds to the `Full` dataset.
+    {% include custom/image_popout.html file="acti/viewing_the_data_repo_2.png" %}
 {% include links.html %}

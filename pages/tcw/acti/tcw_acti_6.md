@@ -1,40 +1,44 @@
 ---
-title:  We're Building! (Again)
-summary: "(Dev Persona) Deploying the build with the correct SQL"
+title:  Let’s Make Some Changes
+summary: "(Dev Persona) Here we will push some pre-staged changes to our develop feature branch"
 series: "Act I"
 weight: 6
-last_updated: September 11, 2018
+last_updated: May 3, 2019
 sidebar: tcw_sidebar
 permalink: tcw_acti_6.html
 folder: tcw
 toc: false
 ---
 
-We’ve again triggered an automated build of `Patients Pipeline`. again. This time the `Package Database Object Changes` should complete successfully. The complete process can take around 4-8 minutes.
+For this workshop we have provided two modalities to make, view, and process our code changes. If you are more of a graphical interface user, then you can follow the path using [VS Code](https://code.visualstudio.com/){:target="_blank"}. If you are a command-line user, then you can follow the path using the terminal & git. You will follow either the VS Code steps or the git steps. You will not do both.
 
-Here is the sequence of automation:
+If you will be using VS Code, use the VS Code icon on the desktop to launch VS Code. This may take a few moments to load.
 
-1. Jenkins is notified via a git post_update hook.
-2. Jenkins executes the `Patients Pipeline` job against the `develop` branch, which does the following against our `Patients Dev`:
-   * an Ansible role to compile the application
-   * a Delphix job to refresh the development data pod
-   * a Datical job to analyze and package the database object changes from our committed SQL scripts
-   * a Datical job to forecast and deploy the packaged changes
-   * an Ansible role to deploy the application
+As we covered before, our initial changes to add the notes functionality have been pre-staged, for your convenience.
 
-### YOUR STEPS FOR THIS SCENE:
+{% capture vscode_steps %}
+1. Launch VS Code, bring it to the foreground, and click on the Source Control Button (in yellow square, below)
+2. Enter a commit message, anything will do (i.e. "Notes Field")
+3. Click the checkmark icon to commit the changes (in orange circle, below).
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_1.png" %}
+4. Now push the changes. You can do that by either clicking sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `push` (highlighted in blue, below)
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_2.png" %}
+5. Click 'OK' if you are prompted to confirm.
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_3.png" %}
+6. If you are prompted to `periodically run 'git fetch'`, click `No`.
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_4.png" %}
+{% endcapture %}
 
-1. Bring Chrome to the foreground
-2. Click on the `Jenkins` bookmark
-3. Click on `Patients Pipeline`
-   {% include custom/image_popout.html file="acti/were_building_again_1.png" %}
-4. You should see your build running. You can identify it by your commit message. Click that line.
-   {% include custom/image_popout.html file="acti/were_building_again_2.png" %}
-5. OPTIONAL: Since our last build was halted before data was changed, we can skip the refresh this time:
-   1. login to the Jenkins instance ([credentials](credentials.html))
-      {% include custom/image_popout.html file="acti/were_building_again_3.png" %}
-   2. When the build gets to the `Refresh Data Pod` stage, click `Abort` on the menu prompt.
-      {% include custom/image_popout.html file="acti/were_building_again_4.png" %}
-6. The build will complete successfully, with all green checkmarks this time.
-   {% include custom/image_popout.html file="acti/were_building_again_5.png" %}
+{% capture git_steps %}
+1. If you haven't already done so, open a terminal and navigate to the `~/git/app_repo` directory.
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_git_1.png" %}
+2. Enter `git status` if you want to see the staged changes. Then type `git commit -m "Notes Field"` to commit the changes
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_git_2.png" %}
+3. Enter `git push` to push our changes to the `develop` branch.
+   {% include custom/image_popout.html file="acti/lets_make_some_changes_git_3.png" %}
+4. You should see some output return in your console with `develop -> develop` at the bottom.
+{% endcapture %}
+
+{% include custom/steps.html vscode_steps=vscode_steps git_steps=git_steps %}
+
 {% include links.html %}

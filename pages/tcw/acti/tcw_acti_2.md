@@ -1,44 +1,36 @@
 ---
-title:  Let’s Make Some Changes
-summary: "(Dev Persona) Here we will push some pre-staged changes to our develop feature branch"
+title:  Add some data to Production
+summary: "(Dev Persona) Manually inspecting our build for success"
 series: "Act I"
 weight: 2
-last_updated: May 3, 2019
+last_updated: September 11, 2018
 sidebar: tcw_sidebar
 permalink: tcw_acti_2.html
 folder: tcw
 toc: false
 ---
 
-For this workshop we have provided two modalities to make, view, and process our code changes. If you are more of a graphical interface user, then you can follow the path using [VS Code](https://code.visualstudio.com/){:target="_blank"}. If you are a command-line user, then you can follow the path using the terminal & git. You will follow either the VS Code steps or the git steps. You will not do both.
+Data pods are usually copies of active sources, like production applications. That means the data in your source applications continue to change after you have created your data pods. Data pods in the Delphix Dynamic Data Platform (DDP) are fully autonomous and read/write capable. This translates to two very important benefits:
 
-If you will be using VS Code, use the VS Code icon on the desktop to launch VS Code. This may take a few moments to load.
+* Changes to your data sources do not impact your data pods
+* Changes to data pods do not impact other data pods or data sources, like production
 
-As we covered before, our initial changes to add the notes functionality have been pre-staged, for your convenience.
+In this scene, we are going to add a new patient to our production instance. In a later scene, we will leverage this data in the non-production instances.
 
-{% capture vscode_steps %}
-1. Launch VS Code, bring it to the foreground, and click on the Source Control Button (in yellow square, below)
-2. Enter a commit message, anything will do (i.e. "Notes Field")
-3. Click the checkmark icon to commit the changes (in orange circle, below).
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_1.png" %}
-4. Now push the changes. You can do that by either clicking sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `push` (highlighted in blue, below)
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_2.png" %}
-5. Click 'OK' if you are prompted to confirm.
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_3.png" %}
-6. If you are prompted to `periodically run 'git fetch'`, click `No`.
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_vscode_4.png" %}
-{% endcapture %}
+### YOUR STEPS FOR THIS SCENE:
 
-{% capture git_steps %}
-1. If you haven't already done so, open a terminal and navigate to the `~/git/app_repo` directory.
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_git_1.png" %}
-2. Enter `git status` if you want to see the staged changes. Then type `git commit -m "Notes Field"` to commit the changes
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_git_2.png" %}
-3. Enter `git push` to push our changes to the `develop` branch.
-   {% include custom/image_popout.html file="acti/lets_make_some_changes_git_3.png" %}
-4. You should see some output return in your console with `develop -> develop` at the bottom.
-{% endcapture %}
-
-{% include custom/steps.html vscode_steps=vscode_steps git_steps=git_steps %}
+1. Bring Chrome to the foreground
+2. Click on the `Patients PROD` button on the bookmark bar.
+3. Log in to the production instance of the Patients application using [credentials](credentials.html){:target="_blank"}  
+    {% include custom/image_popout.html file="acti/the_app_1.png" %}
+4. If you logged in successfully, you should see a list of patients in your browser  
+    {% include custom/image_popout.html file="acti/the_app_2.png" %}
+5. Click the + icon to open the `Add Patient` form.
+   {% include custom/image_popout.html file="acti/add_some_data_to_production_1.png" %}
+6. Fill out the form with fictitious information. Give it a silly city name. We will use this value later. Then click `Save`.
+   {% include warning.html content="Though these labs are isolated, they are not secure. Do not enter real information." %}
+   {% include custom/image_popout.html file="acti/add_some_data_to_production_2.png" %}
+7. Enter the silly city name from the previous step into the search field. Your patient record should show in the search results below. 
+   {% include custom/image_popout.html file="acti/add_some_data_to_production_3.png" %}
 
 {% include links.html %}

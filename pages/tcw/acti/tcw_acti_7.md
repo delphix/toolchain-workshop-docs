@@ -1,6 +1,6 @@
 ---
-title:  Validate Our Build
-summary: "(Dev Persona) Manually inspecting our build for success"
+title:  We're Building!
+summary: "We’re Building! (Dev Persona)"
 series: "Act I"
 weight: 7
 last_updated: September 11, 2018
@@ -8,27 +8,28 @@ sidebar: tcw_sidebar
 permalink: tcw_acti_7.html
 folder: tcw
 toc: false
-next_series: "Act II"
 ---
 
-We should now see the Notes field present. We will also add a new Patient to validate our new feature works.
+We’ve now kicked off an automated build of `Patients Pipeline`, that should take around 6 minutes. We will leverage this time to learn more about the underpinning automation. 
+
+Here is the sequence of automation:
+
+1. Jenkins is notified via a git post_update hook.
+2. Jenkins executes the `Patients Pipeline` job against the `develop` branch, which does the following against our `Patients Dev`:
+   * an Ansible role to compile the application
+   * a Delphix job to refresh the development data pod
+   * a Datical job to analyze and package the database object changes from our committed SQL scripts
+   * a Datical job to forecast and deploy the packaged changes
+   * an Ansible role to deploy the application
 
 ### YOUR STEPS FOR THIS SCENE:
 
 1. Bring Chrome to the foreground
-2. Click on the `Patients DEV` button on the bookmark bar.
-   {% include warning.html content="you must click on the bookmark to refresh the application, otherwise your changes will not show." %}
-3. Log in to the development instance of the Patients application using [credentials](credentials.html){:target="_blank"}  
-   {% include custom/image_popout.html file="acti/validate_our_build_1.png" %}
-4. If you logged in successfully, you should see a list of patients in your browser  
-   {% include custom/image_popout.html file="acti/validate_our_build_2.png" %}
-5. Enter the silly city name from the earlier scene into the search field
-   {% include custom/image_popout.html file="acti/validate_our_build_3.png" %}
-6. Click the view icon (outlined in yellow above) for one of the patients and inspect the record. You should see the notes field.
-   {% include custom/image_popout.html file="acti/validate_our_build_4.png" %}
-7. Click the edit icon (pencil) at the top of the record and add a custom note. Then save the record to validate our feature works. 
-   {% include custom/image_popout.html file="acti/validate_our_build_5.png" %}
-8. Repeat steps 3 & 4 for the same patient and validate your note is present.
-   {% include custom/image_popout.html file="acti/validate_our_build_6.png" %}
-
+2. Click on the `Jenkins` bookmark
+3. Click on `Patients Pipeline`
+    {% include custom/image_popout.html file="acti/were_building_1.png" %}
+4. You should see your build running. You can identify it by your commit message. Click that line.
+    {% include custom/image_popout.html file="acti/were_building_2.png" %}
+5. The build will stop with an error in the `Package and Test SQL Changes` stage
+   {% include custom/image_popout.html file="acti/were_building_3.png" %}
 {% include links.html %}

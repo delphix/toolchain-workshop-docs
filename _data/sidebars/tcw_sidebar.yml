@@ -48,39 +48,43 @@ entries:
       output: web, pdf
     
     - title: Add some data to Production
-      url: /tcw_acti_1.1.html
-      output: web, pdf
-
-    - title: Updating the Data Repository
-      url: /tcw_acti_1.2.html
-      output: web, pdf
-
-    - title: Viewing the Data Repository
-      url: /tcw_acti_1.3.html
-      output: web, pdf
-
-    - title: Let’s Make Some Changes
       url: /tcw_acti_2.html
       output: web, pdf
 
-    - title: We're Building!
+    - title: Updating the Data Repository
       url: /tcw_acti_3.html
       output: web, pdf
 
-    - title: Not So Fast!
+    - title: Some Automation Details (part 1)
       url: /tcw_acti_4.html
       output: web, pdf
-
-    - title: Fix Our Script
+    
+    - title: Viewing the Data Repository
       url: /tcw_acti_5.html
       output: web, pdf
 
-    - title: We're Building! (Again)
+    - title: Let’s Make Some Changes
       url: /tcw_acti_6.html
       output: web, pdf
 
-    - title: Validate Our Build
+    - title: We're Building!
       url: /tcw_acti_7.html
+      output: web, pdf
+
+    - title: Not So Fast!
+      url: /tcw_acti_8.html
+      output: web, pdf
+
+    - title: Fix Our Script
+      url: /tcw_acti_9.html
+      output: web, pdf
+
+    - title: We're Building! (Again)
+      url: /tcw_acti_10.html
+      output: web, pdf
+
+    - title: Validate Our Build
+      url: /tcw_acti_11.html
       output: web, pdf
 
   - title: Act II - Test
@@ -95,7 +99,7 @@ entries:
       url: /tcw_actii_2.html
       output: web, pdf
 
-    - title: Some Automation Details
+    - title: Some Automation Details (part 2)
       url: /tcw_actii_3.html
       output: web, pdf
 
