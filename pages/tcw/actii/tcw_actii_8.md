@@ -73,7 +73,6 @@ git push
 ```
    {% include custom/image_popout.html file="actii/squash_the_bug_git_1.png" %}
 {{ validate_dev }}
-   {% include custom/image_popout.html file="actii/squash_the_bug_git_3.png" %}
 {% endcapture %}
 
 {% include custom/steps.html vscode_steps=vscode_steps git_steps=git_steps %}
