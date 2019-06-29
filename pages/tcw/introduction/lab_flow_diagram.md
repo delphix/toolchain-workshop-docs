@@ -10,6 +10,6 @@ folder: tcw
 toc: false
 ---
 
-{% include custom/image_popout.html file="introduction/SDLC_Toolchain_Swimlane_v2.svg" %}
+{% include custom/image_popout.html file="introduction/tcw_2.0_patients_swimlane.svg" %}
 
 {% include links.html %}
