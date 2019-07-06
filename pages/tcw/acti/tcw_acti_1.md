@@ -15,7 +15,7 @@ The application for our lab is a basic Patients application with 500 records. Th
 The databases for the Dev and QA instances of the application are delivered via Delphix [data pods](https://www.delphix.com/platform/data-pod){:target="_blank"}.
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346602078" %}
 1. Bring Chrome to the foreground
 2. Click on the `Patients PROD` button on the bookmark bar.
 3. Log in to the production instance of the Patients application using [credentials](credentials.html){:target="_blank"}  

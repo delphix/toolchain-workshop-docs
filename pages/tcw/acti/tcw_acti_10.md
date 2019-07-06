@@ -23,7 +23,7 @@ Here is the sequence of automation:
    * an Ansible role to deploy the application
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346609992" %}
 1. Bring Chrome to the foreground
 2. Click on the `Jenkins` bookmark
 3. Click on `Patients Pipeline`

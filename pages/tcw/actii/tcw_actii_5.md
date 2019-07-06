@@ -19,7 +19,7 @@ In this scene, we are going to refresh the data in our `Test` data pod and manua
 just to demonstrate the features stated above...
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346610580" %}
 1. Activate the Delphix Engine tab
 2. Login as qa, if your login has timed out.
     {% include custom/image_popout.html file="actii/automated_testing_4.png" %}

@@ -18,7 +18,7 @@ Next, we will login to Bugzilla and validate the bug report against what we see 
 Finally, we will look at the corresponding bookmark on our `Test` data pod in the Delphix DDP.
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346610470" %}
 1. Activate the Jenkins tab
 2. Click on the `Tests` button (in purple rectangle below)
    {% include custom/image_popout.html file="actii/oh_snap_a_bug_1.png" %}

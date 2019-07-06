@@ -13,6 +13,7 @@ toc: false
 Now that we validated our changes worked in our development environment, it is time for us to merge our feature branch to promote our changes along.
 
 {% capture vscode_steps %}
+{% include custom/watch_steps.html vimeo="346610242" %}
 1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
 2. Click the sync icon across the bottom (in yellow square, below) OR by using the `more actions` menu and selecting `pull`  
    {% include note.html content="DO NOT SKIP THIS STEP" %}
@@ -31,6 +32,7 @@ Now that we validated our changes worked in our development environment, it is t
 {% endcapture %}
 
 {% capture git_steps %}
+{% include custom/watch_steps.html vimeo="346610231" %}
 1. Go back to our ssh terminal and enter `git pull` This will ensure we have all the latest changes to our feature branch
    {% include note.html content="DO NOT SKIP THIS STEP" %}
    {% include custom/image_popout.html file="actii/works_in_my_environment_git_1.png" %}

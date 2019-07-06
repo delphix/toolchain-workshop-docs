@@ -16,6 +16,8 @@ data from the `Test` data pod bookmark.
 In this scene, we are going validate the presence of the bug, and work to source 
 the root cause of the issue.
 
+### YOUR STEPS FOR THIS SCENE:
+{% include custom/watch_steps.html vimeo="346610754" %}
 1. Open `Patients Dev` in a new tab. Login, and go to the Users section.
 You should now see we have replicated the "broken test" environment.
 2. Notice the duplicate `mcred` username. This is the exact state of the bookmarked data in our `Test` data pod.

@@ -19,7 +19,7 @@ This job gets the latest data from Production and prepares it for consumption fo
 We'll have time to discuss what is happening in the next scene.
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346609588" %}
 1. Bring Chrome to the foreground
 2. Click on the Jenkins Tab
 3. Execute the `Data Pipeline` job. This job sequence can take 12-15 minutes to complete.

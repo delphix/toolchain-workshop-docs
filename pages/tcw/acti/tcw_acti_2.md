@@ -18,7 +18,7 @@ Data pods are usually copies of active sources, like production applications. Th
 In this scene, we are going to add a new patient to our production instance. In a later scene, we will leverage this data in the non-production instances.
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346602281" %}
 1. Bring Chrome to the foreground
 2. Click on the `Patients PROD` button on the bookmark bar.
 3. Log in to the production instance of the Patients application using [credentials](credentials.html){:target="_blank"}  

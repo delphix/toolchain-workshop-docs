@@ -14,7 +14,7 @@ next_series: "Act II"
 We should now see the Notes field present. We will also add a new Patient to validate our new feature works.
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346610224" %}
 1. Bring Chrome to the foreground
 2. Click on the `Patients DEV` button on the bookmark bar.
    {% include warning.html content="you must click on the bookmark to refresh the application, otherwise your changes will not show." %}

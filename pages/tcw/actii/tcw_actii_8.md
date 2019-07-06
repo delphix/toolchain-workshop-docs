@@ -27,6 +27,7 @@ just like we did in [Act II Scene I](tcw_actii_1.html){:target="_blank"}
 {% endcapture %}
     
 {% capture vscode_steps %}
+{% include custom/watch_steps.html vimeo="346610932" %}
 1. Bring VS Code to the foreground.
 2. Switch to the Explorer view (purple rectangle, below).
 3. Switch to the `develop` branch by clicking on `master` and then selecting `develop` from the dropdown list.
@@ -50,6 +51,7 @@ ALTER TABLE USERS
 {% endcapture %}
 
 {% capture git_steps %}
+{% include custom/watch_steps.html vimeo="346610891" %}
 1. Go back to our ssh terminal and navigate to
 ```bash
 cd ~/git/app_repo/sql_code/ddl

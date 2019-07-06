@@ -11,6 +11,7 @@ toc: false
 ---
 
 {% capture vscode_steps %}
+{% include custom/watch_steps.html vimeo="346609973" %}
 1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)
 2. Expand the folders `sql_code->ddl` and double-click on add_notes.sql (designated by a red arrow)
 3. Examine the script 
@@ -29,6 +30,7 @@ toc: false
 {% endcapture %}
 
 {% capture git_steps %}
+{% include custom/watch_steps.html vimeo="346609957" %}
 1. Go back to our ssh terminal
 2. Open up the sql file in a text editor, ex. `sql_code/ddl/add_notes.sql`
    {% include custom/image_popout.html file="acti/fix_our_script_git_1.png" %}

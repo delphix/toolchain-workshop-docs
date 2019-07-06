@@ -26,7 +26,7 @@ data in our `Develop` data pod, and replace it with the data from the bug bookma
 automatically created in the last scene.
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346610664" %}
 1. Bring the Delphix Engine tab to the foreground
 2. If you are still logged in as qa, then logout
    {% include custom/image_popout.html file="actii/bugs_happen_1.png" %}

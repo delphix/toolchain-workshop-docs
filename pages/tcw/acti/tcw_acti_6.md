@@ -17,6 +17,7 @@ If you will be using VS Code, use the VS Code icon on the desktop to launch VS C
 As we covered before, our initial changes to add the notes functionality have been pre-staged, for your convenience.
 
 {% capture vscode_steps %}
+{% include custom/watch_steps.html vimeo="346607874" %}
 1. Launch VS Code, bring it to the foreground, and click on the Source Control Button (in yellow square, below)
 2. Enter a commit message, anything will do (i.e. "Notes Field")
 3. Click the checkmark icon to commit the changes (in orange circle, below).
@@ -30,6 +31,7 @@ As we covered before, our initial changes to add the notes functionality have be
 {% endcapture %}
 
 {% capture git_steps %}
+{% include custom/watch_steps.html vimeo="346607807" %}
 1. If you haven't already done so, open a terminal and navigate to the `~/git/app_repo` directory.
    {% include custom/image_popout.html file="acti/lets_make_some_changes_git_1.png" %}
 2. Enter `git status` if you want to see the staged changes. Then type `git commit -m "Notes Field"` to commit the changes

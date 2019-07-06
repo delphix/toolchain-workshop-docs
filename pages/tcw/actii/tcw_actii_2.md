@@ -16,7 +16,7 @@ The automated testing sequence takes about 5 to 6 minutes to complete. We will m
 In this scene, we are going view the running automation sequence in Jenkins and view the jobs running against your QA data pod
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346610254" %}
 1. Bring Chrome to the foreground
 2. Activate the Jenkins tab
 3. Click on `Patients Pipeline`

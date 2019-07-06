@@ -31,6 +31,7 @@ Search for your "ficticious user" from the very first scene of this workshop.
 {% endcapture %}
 
 {% capture vscode_steps %}
+{% include custom/watch_steps.html vimeo="346611049" %}
 {{ shared_steps }}
 1. Click `master` and then choose `origin/production` from the dropdown menu
     {% include custom/image_popout.html file="actii/squash_the_bug_vscode_7.png" %}
@@ -48,6 +49,7 @@ Search for your "ficticious user" from the very first scene of this workshop.
 {% endcapture %}
 
 {% capture git_steps %}
+{% include custom/watch_steps.html vimeo="346611037" %}
 {{ shared_steps }}
 ```bash
 git checkout production

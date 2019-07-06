@@ -15,7 +15,7 @@ Self Service in the Delphix DDP provides software builders (Dev, Test, etc) with
 In this scene, we will login to the DDP self service and watch the population of the data repo as the job from the previous scene is completed.
 
 ### YOUR STEPS FOR THIS SCENE:
-
+{% include custom/watch_steps.html vimeo="346609722" %}
 1. Bring the Delphix Engine tab to the foreground
 2. Logout, if you are currently logged in.
 3. Login as the dev user. The password is delphix
