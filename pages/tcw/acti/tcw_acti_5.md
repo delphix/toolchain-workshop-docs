@@ -25,12 +25,9 @@ In this scene, we will login to the DDP self service and watch the population of
 5. You should now be in the Data Operations screen. Click on `Develop`
    {% include custom/image_popout.html file="actii/bugs_happen_4.png" %}
 6. You should now see the timeline for `Develop` data pod. Click on the Bookmarks button.
-   {% include custom/image_popout.html file="actii/bugs_happen_5.png" %}
-7. You will see one bookmark present. This bookmark was created automatically when our first build failed. Click on the bookmark. You can see that the bookmark is tagged with a Bugzilla ticket number and the git commit hash.
-   {% include custom/image_popout.html file="actii/bugs_happen_6.png" %}
-8. Click `Available` (in yellow rectangle). You should now see bookmarks that have been shared with you via the `Data Pipeline`.
    {% include custom/image_popout.html file="acti/viewing_the_data_repo_1.png" %}
-9. You might not see anything at the moment, but as the `Data Pipeline` build progresses, you will see new bookmarks become available.
-10. Bookmarks are searchable. Search for the bookmark that corresponds to the `Full` dataset.
-    {% include custom/image_popout.html file="acti/viewing_the_data_repo_2.png" %}
+7. Click `Available` (in yellow rectangle). You might not see anything at the moment, but as the `Data Pipeline` build progresses, you will see new bookmarks become available.
+   {% include custom/image_popout.html file="acti/viewing_the_data_repo_2.png" %}
+8. Bookmarks are searchable. Search for the bookmark that corresponds to the `Full` dataset.
+   {% include custom/image_popout.html file="acti/viewing_the_data_repo_3.png" %}
 {% include links.html %}
