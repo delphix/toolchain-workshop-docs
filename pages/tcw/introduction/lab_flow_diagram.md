@@ -10,6 +10,10 @@ folder: tcw
 toc: false
 ---
 
+## Data Pipeline
+{% include custom/image_popout.html file="introduction/tcw_2.0_datapipeline_swimlane.svg" %}
+
+## Patients Pipeline
 {% include custom/image_popout.html file="introduction/tcw_2.0_patients_swimlane.svg" %}
 
 {% include links.html %}
