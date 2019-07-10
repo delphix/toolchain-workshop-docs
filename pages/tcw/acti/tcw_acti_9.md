@@ -10,6 +10,8 @@ folder: tcw
 toc: false
 ---
 
+Now armed with the information from the Datical reports, let's fix this issue in our code and push our updates.
+
 {% capture vscode_steps %}
 {% include custom/watch_steps.html vimeo="346609973" %}
 1. Launch VS Code, bring it to the foreground, and click on the Explorer Button (in yellow square, below)

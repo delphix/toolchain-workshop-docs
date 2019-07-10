@@ -10,9 +10,7 @@ folder: tcw
 toc: false
 ---
 
-Let’s bring our original data back into our data pod and test against that, just to test our patch again against realistic data.
-
-In this scene, we are going to switch back to our original data branch to test with the data we were originally working against.
+Alright! With all of our tests passing, it's time we roll our feature out to production!
 
 {% capture shared_steps %}
 1. With our testing success, it's time to push our feature to production.

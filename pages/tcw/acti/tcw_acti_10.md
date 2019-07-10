@@ -10,7 +10,7 @@ folder: tcw
 toc: false
 ---
 
-We’ve again triggered an automated build of `Patients Pipeline`. again. This time the `Package Database Object Changes` should complete successfully. The complete process can take around 4-8 minutes.
+We’ve triggered an automated build of `Patients Pipeline` again. This time the `Package Database Object Changes` should complete successfully. The complete process can take around 4-8 minutes.
 
 Here is the sequence of automation:
 

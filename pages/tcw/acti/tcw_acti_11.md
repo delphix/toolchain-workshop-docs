@@ -11,7 +11,7 @@ toc: false
 next_series: "Act II"
 ---
 
-We should now see the Notes field present. We will also add a new Patient to validate our new feature works.
+Alright, our build was successful! We should now see the Notes field present. We will also add a new Patient to validate our new feature works.
 
 ### YOUR STEPS FOR THIS SCENE:
 {% include custom/watch_steps.html vimeo="346610224" %}

@@ -10,6 +10,6 @@ folder: tcw
 toc: false
 ---
 
-{% include custom/image_popout.html file="introduction/SDLC-Toolchain-Classroom-Architecture.png" %}
+{% include custom/image_popout.html file="introduction/tcw_2.0_arch_diag.svg" %}
 
 {% include links.html %}
