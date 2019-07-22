@@ -1,0 +1,12 @@
+<div class="panel-group" id="accordion-{{include.topic}}">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion-{{include.topic}}" href="#collapseOne-{{include.topic}}">MORE ABOUT {{include.topic | upcase}}</a>
+            </h4>
+        </div>
+        <div id="collapseOne-{{include.topic}}" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">{{ include.content | markdownify }}</div>
+        </div>
+    </div>
+</div>

@@ -22,6 +22,13 @@ Here is the sequence of automation:
    * a Datical job to forecast and deploy the packaged changes
    * an Ansible role to deploy the application
 
+<br>
+{% capture more_about_datical %}
+Datical’s mission is to transform the way businesses build software so they can deliver better customer experiences, faster. Datical radically improves and simplifies the application release process by modernizing and automating the database release process. Datical solutions deliver the automation capabilities technology executives need to remove database deployments as a barrier to delivering new application innovation. With Datical enterprises can shorten the time it takes to bring application innovation to market while eliminating the security vulnerabilities, costly errors, data loss and downtime often associated with current database deployment methods. Datical delivers results for some of the world’s most admired companies including: Sony, Nike, Travelers, and UPS.
+{% endcapture %}
+
+{% include custom/more_about.html topic="Datical" content=more_about_datical %}
+
 ### YOUR STEPS FOR THIS SCENE:
 {% include custom/watch_steps.html vimeo="346609881" %}
 1. Bring Chrome to the foreground
