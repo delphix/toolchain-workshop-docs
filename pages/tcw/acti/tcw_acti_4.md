@@ -60,7 +60,11 @@ The `Data Pipeline` is a declarative [Jenkins Pipeline](https://jenkins.io/doc/b
 The Pipeline is defined by a file (`Jenkinsfile`) that is stored with our application code in version control.
    {% include custom/image_popout.html file="acti/updating_the_data_catalog_3.png" %}
 4. OPTIONAL: The relevant contents of the `Jenkinsfile` have been included in images on this page for convenience,
-but you can clone the actual file in your environment by executing `git clone tooling:/var/lib/jenkins/data-pipeline.git`
+but you can clone the actual file in your environment by executing 
+```
+cd ~/git
+git clone git@tooling:/var/lib/jenkins/data-pipeline.git
+```
 5. Let's inspect the `Jenkinsfile`.  
    
    In the image below, several sections of the Jenkinsfile have been collapsed for clarity.
