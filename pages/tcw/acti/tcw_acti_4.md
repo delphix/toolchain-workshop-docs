@@ -50,7 +50,7 @@ We use myriad techniques to accomplish the data automation in the Pipeline for d
 In practice, the user could leverage any method they prefer. 
 
 ### YOUR STEPS FOR THIS SCENE:
-{% include custom/watch_steps.html vimeo="REPLACEME" %}
+{%- comment -%} {% include custom/watch_steps.html vimeo="REPLACEME" %} {%- endcomment -%}
 1. Click the `Jenkins` bookmark. 
 2. Click on the `Data Pipeline`
    {% include custom/image_popout.html file="acti/updating_the_data_catalog_2.png" %}
