@@ -18,7 +18,8 @@ These credentials are listed in the lab documentation where required, but are al
 | patients | patients_admin | delphix |
 | Delphx DDP self-service | dev | delphix |
 | Delphx DDP self-service | qa | delphix |
-| Delphix DDP admin | delphix_admin | landshark |
+| Delphix DDP Virtualization admin | delphix_admin | Landshark-12 |
+| Delphix DDP Masking admin | admin | Landshark-12 |
 | jenkins | admin | admin |
 | bugzilla | admin | password |
 
