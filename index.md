@@ -39,7 +39,7 @@ permalink: index.html
                     <p>In Act II, we will be simulating using Delphix to truly deliver automated testing, complete with unpolluted realistic data. In this case, a recent code change has introduced a bug that causes our Patients application to no longer function.</p>
                 </div>
                 <div class="tab-pane fade" id="act-iii">
-                    <h4>Act III - Break Fix</h4>
+                    <h4>Act III - Break Fix (coming soon)</h4>
                     <p>In Act III, we will be simulating using Delphix to quickly restore service when a data corruption issue has caused an outage in Production.</p>
                 </div>
             </div>
