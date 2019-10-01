@@ -14,7 +14,6 @@ While we wait for the remainder of the `master Patients Pipeline` build job to f
 The format of this scene will differ a little bit, as you will execute steps as we go along and explain some things.
 
 ### YOUR STEPS FOR THIS SCENE:
-{%- comment -%} {% include custom/watch_steps.html vimeo="REPLACEME" %} {%- endcomment -%}
 1. Click the `Jenkins` bookmark. 
 2. Click on the `Patients Pipeline`
    {% include custom/image_popout.html file="actii/automated_testing_2.png" %}
