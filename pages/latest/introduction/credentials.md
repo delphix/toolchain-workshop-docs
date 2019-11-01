@@ -6,7 +6,7 @@ weight: 4
 last_updated: September 11, 2018
 sidebar: tcw_sidebar
 permalink: credentials.html
-folder: tcw
+folder: latest
 toc: false
 next_series: "Act I"
 ---
