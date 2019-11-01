@@ -34,6 +34,13 @@ exclude:
   - .idea/
   - .gitignore
   - vendor
+  # - 204
+  # - 209
+  # - 210
+  # - 211
+  # - 212
+  # - 213
+
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: Delphix Toolchain Workshop
