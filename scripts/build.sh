@@ -11,6 +11,6 @@ cp _exclude.yml ${ROOTDIR}
 
 cd ${ROOTDIR}
 
-bundle exec jekyll build --config _config.yml,_exclude.yml
+bundle exec jekyll build --config _config.yml,_exclude.yml -d archives/214
 
 rm _exclude.yml
