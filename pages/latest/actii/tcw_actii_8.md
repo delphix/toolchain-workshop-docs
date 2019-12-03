@@ -35,17 +35,23 @@ just like we did in [Act II Scene I](tcw_actii_1.html){:target="_blank"}
 4. Expand the sql_code/ddl folders (underlined, below) and then click the new file button (red circle, below)
 5. Name the new file something like `add_constraint_to_username.sql`
    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_2.png" %}
-6. In the new file, copy and paste the following text, then save the file.
+6. In the new file, copy and paste one of the the following texts, then save the file.
+#### FOR Oracle
 ```sql
 ALTER TABLE USERS
     ADD CONSTRAINT username UNIQUE(username);
 ```
+#### FOR Postgres
+```sql
+ALTER TABLE ONLY public.users 
+        ADD CONSTRAINT username UNIQUE(username);
+```
    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_3.png" %} 
-7. Now let's commit and push our change. Switch to the Source Control view (yellow box) and click the `+` (yellow circle) icon to add our changes
+1. Now let's commit and push our change. Switch to the Source Control view (yellow box) and click the `+` (yellow circle) icon to add our changes
    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_4.png" %}
-8. Add a commit message and click the checkmark to apply the commit. 
+2. Add a commit message and click the checkmark to apply the commit. 
    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_5.png" %}
-9. Click the sync button (yellow rectangle) to push the changes. Click `OK` button, if prompted.
+3. Click the sync button (yellow rectangle) to push the changes. Click `OK` button, if prompted.
    {% include custom/image_popout.html file="actii/squash_the_bug_vscode_6.png" %}
 {{ validate_dev }}
 {% endcapture %}
@@ -60,14 +66,20 @@ cd ~/git/app_repo/sql_code/ddl
 ```bash
 git checkout develop
 ```
-3. Create a sql file and add the following text to it:
+3. Create a sql file and add one of the the following texts to it:
+#### FOR Oracle
 ```sql
 ALTER TABLE USERS
     ADD CONSTRAINT username UNIQUE(username);
 ```
-4. Save the file and exit the text editor
+#### FOR Postgres
+```sql
+ALTER TABLE ONLY public.users 
+        ADD CONSTRAINT username UNIQUE(username);
+```
+1. Save the file and exit the text editor
    {% include custom/image_popout.html file="actii/squash_the_bug_git_2.png" %}
-5. Add the file to git, commit the file with a message, and then push the changes to git.
+2. Add the file to git, commit the file with a message, and then push the changes to git.
 ```bash
 git add add_constraint_to_username.sql
 git commit -m "username constraint"
