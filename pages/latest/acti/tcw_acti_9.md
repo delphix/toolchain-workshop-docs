@@ -10,7 +10,7 @@ folder: latest
 toc: false
 ---
 
-Now armed with the information from the Datical reports, let's fix this issue in our code and push our updates.
+Now armed with the information from the Datical reports, let's fix this issue in our code and push our updates. Do not be concerned if the images of the script below do not exactly match your environment. The images in the steps below are for the `Oracle` data type, but they are almost identical to the `Postgres` data type. The steps to correct the script are the same for each.
 
 {% capture vscode_steps %}
 {% include custom/watch_steps.html vimeo="346609973" %}
