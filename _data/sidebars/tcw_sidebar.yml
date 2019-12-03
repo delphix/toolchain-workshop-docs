@@ -142,3 +142,7 @@ entries:
     - title: v2.14
       output: web
       url: /archives\/214\/
+    
+    - title: v3.00
+      output: web
+      url: /archives\/300\/
