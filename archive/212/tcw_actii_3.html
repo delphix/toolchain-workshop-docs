@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The details of the Patients Pipeline">
+<meta name="keywords" content=" ">
+<title>Some Automation Details (part 2) | Documentation for the Delphix Toolchain Workshop</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="toolchain-workshop-docs" href="delphix.github.io/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Delphix Toolchain Workshop</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://github.com/delphix/toolchain-workshop-docs" target="_blank">GitHub</a></li>
+                
+                
+                
+                <li class="active"><a href="">Toolchain Workshop</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:adam.bowen@delphix.com?subject=Delphix Toolchain Workshop feedback&body=I have some feedback about the Some Automation Details (part 2) page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Some Automation Details (part 2)">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">tcw v2.12</li>
+  
+  
+  
+      
+  
+  <li>
+      <a href="#">Introduction</a>
+      <ul>
+          
+          
+          
+          <li><a href="index.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="lab_flow_diagram.html">Lab Flow Diagram</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="architecture_diagram.html">Architecture Diagram</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="credentials.html">Credentials Quick Reference</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Act I - Build</a>
+      <ul>
+          
+          
+          
+          <li><a href="tcw_acti_1.html">The App</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_2.html">Add some data to Production</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_3.html">Updating the Data Repository</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_4.html">Some Automation Details (part 1)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_5.html">Viewing the Data Repository</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_6.html">Let’s Make Some Changes</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_7.html">We're Building!</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_8.html">Not So Fast!</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_9.html">Fix Our Script</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_10.html">We're Building! (Again)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_acti_11.html">Validate Our Build</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Act II - Test</a>
+      <ul>
+          
+          
+          
+          <li><a href="tcw_actii_1.html">Works in My Environment!</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_actii_2.html">Automated Testing</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a href="tcw_actii_3.html">Some Automation Details (part 2)</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_actii_4.html">Oh Snap! A bug!</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_actii_5.html">Ready to Test Again</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_actii_6.html">Bugs Happen</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_actii_7.html">Triaging the Bug</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_actii_8.html">Squash the Bug</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tcw_actii_9.html">Deploy to Production</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="seriesContext">
+    <a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="tcw_actii_4.html"><button type="button" class="btn btn-primary">Next: Oh Snap! A bug!</button></a>
+        
+    </a>
+    &nbsp;
+    <div class="btn-group">
+        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Jump to: <span class="caret"></span></button>
+        <ol class="dropdown-menu">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_1.html">Works in My Environment!</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_2.html">Automated Testing</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="active"> → Some Automation Details (part 2)</li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_4.html">Oh Snap! A bug!</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_5.html">Ready to Test Again</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_6.html">Bugs Happen</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_7.html">Triaging the Bug</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_8.html">Squash the Bug</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_9.html">Deploy to Production</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+        </ol>
+    </div>
+    &nbsp;
+    <a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </a>
+</div>
+<p>While we wait for the remainder of the <code class="highlighter-rouge">master Patients Pipeline</code> build job to finish, we will go over some of the details of what is actually happening.
+The format of this scene will differ a little bit, as you will execute steps as we go along and explain some things.</p>
+
+<h3 id="your-steps-for-this-scene">YOUR STEPS FOR THIS SCENE:</h3>
+<ol>
+  <li>Click the <code class="highlighter-rouge">Jenkins</code> bookmark.</li>
+  <li>Click on the <code class="highlighter-rouge">Patients Pipeline</code>
+    <figure><a class="no_icon" target="_blank" href="images/actii/automated_testing_2.png"><img class="docimage" src="images/actii/automated_testing_2.png" alt="" /></a></figure>
+    <p><br /></p>
+  </li>
+  <li>Click on the job at the top of the list.
+This screen shows us the various stages of the <code class="highlighter-rouge">Patient Pipeline</code>.
+The <code class="highlighter-rouge">Patients Pipeline</code> is a declarative <a href="https://jenkins.io/doc/book/pipeline/" target="_blank">Jenkins Pipeline</a>.
+The Pipeline is defined by a file (<code class="highlighter-rouge">Jenkinsfile</code>) that is stored with our application code in version control.
+    <figure><a class="no_icon" target="_blank" href="images/actii/automated_testing_3.png"><img class="docimage" src="images/actii/automated_testing_3.png" alt="" /></a></figure>
+    <p><br /></p>
+  </li>
+  <li>
+    <p>Let’s inspect the <code class="highlighter-rouge">Jenkinsfile</code>. Open <code class="highlighter-rouge">VS Code</code> and click on <code class="highlighter-rouge">Jenkinsfile</code>.</p>
+
+    <p>In the image below, several sections of the Jenkinsfile have been collapsed for clarity.</p>
+    <figure><a class="no_icon" target="_blank" href="images/actii/some_automation_details_1.png"><img class="docimage" src="images/actii/some_automation_details_1.png" alt="" /></a></figure>
+    <p><br /></p>
+  </li>
+</ol>
+
+<p>The main sections of the <code class="highlighter-rouge">Jenkinsfile</code> include:</p>
+
+<ul>
+  <li>environment - This section establishes environment variables that are set and/or read during the exection of the Pipeline.</li>
+  <li>stage(&lt;name&gt;) - Each of these correspond to named stages you saw in the job view in your web browser</li>
+  <li>post - These actions execute after the steps are completed.</li>
+</ul>
+
+<p>The stages of the <code class="highlighter-rouge">Jenkinsfile</code>:</p>
+<ul>
+  <li>Prepare Environment - Sets some environment variables based on the code branch.</li>
+  <li>Prepare Workspace - Cleans up the workspace and checks out the application code, setting some git parameters.</li>
+  <li>Compile Application - Executes the Ansible playbook to compile the Patients application from source code.</li>
+  <li>Refresh Data Pod - Executes the (<a href="https://github.com/delphix/automation-framework" target="_blank">Delphix Automation Framework (DAF)</a>) to refresh the corresponding environment’s data pod.
+This provides the latest available masked data set to the lower environment, allowing code to be deployed to a known-good data state with a production schema.</li>
+  <li>Package and Test SQL Changes - Executes Datical’s Deployment Manager against any new sql scripts in our code base.
+This validates the script against syntax errors and any defined policies. A validated script is then packaged for deployment.</li>
+  <li>Forecast Database Changes - Executes Datical’s Forecaster to produce a forecast report against the environment’s data pod of all resultant database changes of the scripts identfied by the previous stage.</li>
+  <li>Deploy Database Changes - Executes Datical’s Deployment Mananger to deploy the packaged and forcasted changes against the corresponding environment’s data pod.
+All of the Datical reports are packaged up and made available in the <code class="highlighter-rouge">artifacts</code> tab of the <code class="highlighter-rouge">Patients Pipeline</code></li>
+  <li>Deploy Application Stack - Now that any database changes have been applied, the application can be deployed and started.</li>
+  <li>Automated Testing - If this Pipeline run was triggered by an event in the <code class="highlighter-rouge">master</code> branch, then complete a suite of automated testing to validate the application.
+The test results are packaged up and made available in the <code class="highlighter-rouge">tests</code> tab of the <code class="highlighter-rouge">Patients Pipeline</code></li>
+</ul>
+
+<p>The post actions of the <code class="highlighter-rouge">Jenkinsfile</code>:</p>
+<ul>
+  <li>If the build fails or is deemed unstable, then open a ticket in Bugzilla and create a bookmark on the corresponding environment’s data pod.</li>
+  <li>If the build fails or is deemed unstable, execute a call to the (<a href="https://github.com/delphix/automation-framework" target="_blank">Delphix Automation Framework (DAF)</a>) to execute an action on the corresponding environment’s data pod.</li>
+</ul>
+
+<p>Now, feel free to explore around until your <code class="highlighter-rouge">Patients Pipeline</code> job completes.
+Just be sure to <code class="highlighter-rouge">not click Save or Apply,</code> and you should be able to stay clear of doing any real damage.</p>
+
+<p>Once the <code class="highlighter-rouge">Patients Pipeline</code> job has completed (unstable), you are ready for the next scene.</p>
+
+
+<div class="seriesContext">
+    <a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="tcw_actii_4.html"><button type="button" class="btn btn-primary">Next: Oh Snap! A bug!</button></a>
+        
+    </a>
+    &nbsp;
+    <div class="btn-group">
+        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Jump to: <span class="caret"></span></button>
+        <ol class="dropdown-menu">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_1.html">Works in My Environment!</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_2.html">Automated Testing</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="active"> → Some Automation Details (part 2)</li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_4.html">Oh Snap! A bug!</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_5.html">Ready to Test Again</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_6.html">Bugs Happen</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_7.html">Triaging the Bug</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_8.html">Squash the Bug</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li>
+                <a href="tcw_actii_9.html">Deploy to Production</a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+        </ol>
+    </div>
+    &nbsp;
+    <a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </a>
+</div>
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

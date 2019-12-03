@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>toolchain-workshop-docs</title>
+        <description>Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features.</description>
+        <link>delphix.github.io/</link>
+        <atom:link href="delphix.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Fri, 01 Nov 2019 13:57:05 -0400</pubDate>
+        <lastBuildDate>Fri, 01 Nov 2019 13:57:05 -0400</lastBuildDate>
+        <generator>Jekyll v3.8.5</generator>
+        
+    </channel>
+</rss>
