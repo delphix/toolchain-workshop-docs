@@ -10,7 +10,7 @@ folder: latest
 toc: false
 ---
 
-The application for our lab is a basic Patients application with 500 records. The application is written in Angular and underpinned by an Oracle 12c multitenant database.
+The application for our lab is a basic Patients application with 500 records. The application is written in Angular and underpinned by an Oracle 12c multitenant database or a Postgres 11 database.
 
 The databases for the Dev and QA instances of the application are delivered via Delphix [data pods](https://www.delphix.com/platform/data-pod){:target="_blank"}.
 
