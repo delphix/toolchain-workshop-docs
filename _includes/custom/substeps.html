@@ -1,0 +1,22 @@
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Oracle Steps</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">{{ include.oracle_steps | markdownify }}</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Postgres Steps</a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse noCrossRef">
+            <div class="panel-body">{{ include.postgres_steps | markdownify }}</div>
+        </div>
+    </div>
+</div>
