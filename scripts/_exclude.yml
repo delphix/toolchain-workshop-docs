@@ -1,0 +1,6 @@
+exclude:
+- .idea/
+- .gitignore
+- vendor
+- scripts
+- archive
