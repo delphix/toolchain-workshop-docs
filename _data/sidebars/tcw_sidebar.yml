@@ -3,7 +3,7 @@
 entries:
 - title: TCW
   product: tcw
-  version: v2.13
+  version: v2.14
   folders:
 
   - title:
@@ -126,3 +126,15 @@ entries:
     - title: Deploy to Production
       url: /tcw_actii_9.html
       output: web, pdf
+    
+  - title: Archives
+    output: web
+    folderitems:
+    
+    - title: v2.04
+      output: web
+      url: /archives\/204\/
+    
+    - title: v2.13
+      output: web
+      url: /archives\/213\/
